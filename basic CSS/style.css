@@ -1,17 +1,33 @@
-h1{
-   /*background-color: gold;
-   color: black;*/
-   border-style: solid;
-   border-width: 10px;
-   
-   border-bottom-left-radius: 25px;
-   border-bottom-right-radius: 30px;
-   border-top-left-radius: 25px;
-   border-top-right-radius: 30px;
-   border-color: rgba(9, 135, 245, 0.719);
-   padding: 30px;
-   padding-left: 10px;
-   padding-top: 15px;
-   padding-bottom: 20px;
-   padding-right: 25px;
+*
+{
+   margin: 0;
+ padding: 0;
+}
+img{
+    height:px;
+}
+body{
+    height: 100vh;
+    background-color: rgba(241, 72, 10, 0.411);
+}
+#box{
+    height:vh;
+    max-width: 50vw;
+    background-color: white;
+    padding: 10px,20px,10px,20px;
+    border-radius: 50px;
+    margin: 30vh auto;
+    box-sizing: border-box;
+    text-align: center;
+     box-shadow: 10px 20px 88px rgb(241, 97, 7);
+     text-decoration: 2px solid blue underline;
+}
+.button{
+    padding: 15px 20px;
+    border-radius: 20px 10px 20px 0px;
+     box-shadow: 10px 20px 88px rgb(241, 97, 7);
+    background-color: #0d5be0;
+    text-decoration: 2px solid blue underline;
+    color: black;
+
 }
