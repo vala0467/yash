@@ -1,0 +1,36 @@
+* /* universal selector-these properties applies to all elements */
+
+{
+
+ margin: 0;
+ padding: 0;
+
+}
+
+img{
+    height:  250px;
+}
+body{
+    height: 100vh;
+    background-color: antiquewhite;
+
+}
+#box{
+    height: vh;
+    max-width: 50vw;
+    background-color: white;
+    padding: 51px,10px,15px,20px;
+    border-radius: 50px;
+    margin: 30vh auto;
+    box-sizing: border-box;
+    text-align: center;
+     box-shadow: 10px 20px 88px rgb(36, 2, 40);
+     text-decoration: 2px solid blue underline;
+}
+.button{
+    padding: 15px 20px;
+    border-radius: 20px 10px 20px 0px;
+    background-color: #d9e7ff;
+    color: black;
+
+}
