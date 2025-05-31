@@ -1,0 +1,20 @@
+h1{
+    text-align: center;
+    background-color: rgb(37, 179, 223);
+     border-top-right-radius:10px;
+    border-top-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    background-image: url("https://www.worldatlas.com/r/w960-q80/upload/56/fb/ee/alaska-mountain-range-csnafzger.jpg");
+    filter:invert();
+}
+img{
+    border-top-right-radius:50px;
+    border-top-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    border-bottom-left-radius: 50px;
+}
+#yash{
+    background-color: rgb(78, 187, 187);
+    color: black;
+}
