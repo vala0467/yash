@@ -1,0 +1,159 @@
+       #box{
+            width: 100vh;
+            height: 70vw;
+            border: 3px solid #73AD21;
+            text-align: center;
+       }
+       
+       #box1{
+        width: 20vh;
+            height: 65vw;
+            border: 3px solid #73AD21;
+            text-align: center;
+       }
+         .flex-container{
+            position: absolute;
+            top: 90px;
+            left: 20px;
+            width: 130px;
+            height: 20x;
+            border: 3px solid #73AD21;
+            display: flex;
+        }
+        .chai{
+            position: absolute;
+            top: 120px;
+            left: 20px;
+            width: 130px;
+            height: 20x;
+            border: 3px solid #73AD21;
+        }
+        
+            .yash{
+               position:absolute;
+               top:60px;
+                left: 20px;
+            width: 130px;
+            height: 20x;
+            border: 3px solid #73AD21;
+            }
+        .kumar{
+             position:absolute;
+               top:150px;
+                left: 20px;
+            width: 130px;
+            height: 20x;
+            border: 3px solid #73AD21;
+        }
+        .ram{
+            position:absolute;
+            top:180px;
+            left: 20px;
+            width: 130px;
+            height: 20x;
+            border: 3px solid #73AD21;
+        }
+        .chan{
+            position:absolute;
+            top:210px;
+            left: 20px;
+            width: 130px;
+            height: 20x;
+            border: 3px solid #73AD21;
+        }
+        .siva{
+            position:absolute;
+            top:240px;
+            left: 20px;
+            width: 130px;
+            height: 20x;
+            border: 3px solid #73AD21; 
+        }
+        .dav{
+             position:absolute;
+            top:270px;
+            left: 20px;
+            width: 130px;
+            height: 20x;
+            border: 3px solid #73AD21; 
+        }
+        .esha{
+             position:absolute;
+            top:300px;
+            left: 20px;
+            width: 130px;
+            height: 20x;
+            border: 3px solid #73AD21; 
+        }
+        .s{
+             position:absolute;
+            top:330px;
+            left: 20px;
+            width: 130px;
+            height: 20x;
+            border: 3px solid #73AD21; 
+        }
+        .d{
+             position:absolute;
+            top:360px;
+            left: 20px;
+            width: 130px;
+            height: 20x;
+            border: 3px solid #73AD21;  
+        }
+        .r{
+              position:absolute;
+            top:390px;
+            left: 20px;
+            width: 130px;
+            height: 20x;
+            border: 3px solid #73AD21; 
+        }
+        .e{
+              position:absolute;
+            top:420px;
+            left: 20px;
+            width: 130px;
+            height: 20x;
+            border: 3px solid #73AD21; 
+        }
+        .t{
+              position:absolute;
+            top:450px;
+            left: 20px;
+            width: 130px;
+            height: 20x;
+            border: 3px solid #73AD21; 
+        }
+        .y{
+              position:absolute;
+            top:480px;
+            left: 20px;
+            width: 130px;
+            height: 20x;
+            border: 3px solid #73AD21; 
+        }
+        .o{
+              position:absolute;
+            top:510px;
+            left: 20px;
+            width: 130px;
+            height: 20x;
+            border: 3px solid #73AD21; 
+        }
+        .w{
+              position:absolute;
+            top:540px;
+            left: 20px;
+            width: 130px;
+            height: 20x;
+            border: 3px solid #73AD21; 
+        }
+        .q{
+              position:absolute;
+            top:570px;
+            left: 20px;
+            width: 130px;
+            height: 20x;
+            border: 3px solid #73AD21; 
+        }

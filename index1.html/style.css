@@ -6,7 +6,9 @@ h1{
     border-bottom-right-radius: 10px;
     border-bottom-left-radius: 10px;
     background-image: url("https://www.worldatlas.com/r/w960-q80/upload/56/fb/ee/alaska-mountain-range-csnafzger.jpg");
-    filter:invert();
+    filter: invert();
+
+
 }
 img{
     border-top-right-radius:50px;
@@ -17,4 +19,5 @@ img{
 #yash{
     background-color: rgb(78, 187, 187);
     color: black;
+    position: static;
 }
