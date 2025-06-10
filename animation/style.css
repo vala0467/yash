@@ -1,0 +1,15 @@
+.box{
+    height: 100px;
+    width: 100px;
+    top: 0;
+    left: 0;
+    background-color: green;
+    transition-duration: 1s;
+    transition-timing-function: inherit;
+    animation: ease-in;
+    animation-direction: reverse;
+}
+.box:hover{
+    transform: translate(200px) rotate(360deg);
+}
+ 
