@@ -45,41 +45,71 @@
         <h2 class="title">Categories</h2>
         <section id="categories">
             <div class="item">
-                <a href="./Dress.html"  target="_blank"> 
+                <a href="./Ethic/index.html"  target="_blank"> 
               <img src="./Ethic Wear.jpg" alt="Ethnic Wear" title="Ethnic Wear" width="100px" height="110px" style="border-radius:50px;"  > </a>
                 <h2> Ethic Wear </h2>
                 </div>
             <div class="item">
-                <img src="./Western Wear.webp" alt="Ethnic Wear" title="Ethnic Wear">
+                <a href="./western wear/index.html" target="_blank"> 
+                <img src="./Western Wear.webp" alt="Western Wear " title="Western Wear "width="100px" height="110px" style="border-radius:50px;"></a>
                 <h2>Western Wear</h2>
             </div>
             <div class="item">
-                <img src="./suit.avif" alt="Ethnic Wear" title="Ethnic Wear">
-                <h2>Suits</h2>
+                <a href="./Watch/index.html " target="_blank"> 
+               <img src="https://sylvi.in/cdn/shop/files/Sylvi_Blade_White_Rose_Gold_Silver_Stainless_Steel_Watch_Main_Image_800x1000_6a23285c-e31a-4815-93a4-305c92e9ef14_540x.webp?v=1750827110 " alt="Watch " title="Watch" width="100px" height="110px" style="border-radius:50px;"></a>
+                <h2>Watch</h2>
             </div>
             <div class="item">
-                <img src="./saree.avif" alt="Ethnic Wear" title="Ethnic Wear">
-                <h2>Sarees</h2>
+                <a href="./shoes/index.html" target="_blank"> 
+                <img src="https://5.imimg.com/data5/SELLER/Default/2023/7/323356025/UR/EQ/WS/192140499/safeimagekit-resized-img-3--500x500.png" alt="Shoes" title="Shoes"  width="100px" height="110px" style="border-radius:50px;"></a>
+                <h2>Shoes</h2>
             </div>
             <div class="item">
-                <img src="./cap.webp" alt="Ethnic Wear" title="Ethnic Wear">
-                <h2>Caps</h2>
+                <img src="./cap.webp" alt="Electronics" title="Electronics">
+                <h2>Electronics</h2>
             </div>
             <div class="item">
-                <img src="./kids.jpg" alt="Ethnic Wear" title="Ethnic Wear">
-                <h2>Kids</h2>
+                <img src="./kids.jpg" alt="Grocery" title="Grocery">
+                <h2> Grocery</h2>
             </div>
             <div class="item">
-                <img src="./Jewellery.jpg" alt="Ethnic Wear" title="Ethnic Wear">
-                <h2>Jewellery</h2>
+                <img src="./Jewellery.jpg" alt="Moblies " title="Moblies ">
+                <h2>Moblies </h2>
             </div>
             <div class="item">
-                <img src="./other.webp" alt="Ethnic Wear" title="Ethnic Wear">
-                <h2>Other</h2>
+                <img src="./other.webp" alt="Furniture" title="Furniture">
+                <h2>Furniture</h2>
             </div>
             
         </section>
-        <h2 class="title">Today Deals</h2>
+  <h2 class="title">
+  Today Offer 
+  <span id="timer" style="color:red; font-size:18px;"></span>
+</h2>
+
+<script>
+  // Countdown Timer (48 hours from now)
+  let countDownDate = new Date().getTime() + (48 * 60 * 60 * 1000); // 48 hours
+
+  let timerInterval = setInterval(function() {
+    let now = new Date().getTime();
+    let distance = countDownDate - now;
+
+    let hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)) + 
+                Math.floor(distance / (1000 * 60 * 60 * 24)) * 24; // total hours including days
+    let minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    let seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+    document.getElementById("timer").innerHTML = `Ends in ${hours}h ${minutes}m ${seconds}s`;
+
+    if (distance < 0) {
+      clearInterval(timerInterval);
+      document.getElementById("timer").innerHTML = "Offer Expired!";
+    }
+  }, 1000);
+</script>
+
+ 
         <section id="products">
             <div class="product">
                 <img src="./81jVfiz5wPL._AC_UY1100_.jpg" alt="Suit">
@@ -166,8 +196,47 @@
                 <button>Add to cart</button>
             </div>
         </section>
-    </main><br>
+         <!-- Cart Section -->
+        <h2 class="title">Your Cart</h2>
+        <div id="cart" class="p-3 border rounded bg-light">
+            <ul id="cart-items"></ul>
+            <h4 id="total">Total: ₹0</h4>
+        </div>
 
+        <script>
+            const cartItems = [];
+            const cartList = document.getElementById("cart-items");
+            const totalAmount = document.getElementById("total");
+
+            const addToCartButtons = document.querySelectorAll(".product button");
+
+            addToCartButtons.forEach((button, index) => {
+                button.addEventListener("click", () => {
+                    const product = button.parentElement;
+                    const name = product.querySelector("h2").innerText;
+                    const price = product.querySelector(".price").innerText.replace("₹", "");
+
+                    cartItems.push({ name, price: parseFloat(price) });
+                    updateCart();
+                });
+            });
+
+            function updateCart() {
+                cartList.innerHTML = "";
+                let total = 0;
+
+                cartItems.forEach(item => {
+                    const li = document.createElement("li");
+                    li.innerText = `${item.name} - ₹${item.price}`;
+                    cartList.appendChild(li);
+                    total += item.price;
+                });
+
+                totalAmount.innerText = `Total: ₹${total}`;
+            }
+        </script>
+    </main><br>
+    
      <footer>This site belongs to Yaswanth &copy; 2025</footer>
  
 </body>

@@ -1,15 +1,14 @@
 const dresses = [
-    { name: "", Image: "", price: 599 },
-      { name: "", Image: "", price: 599 },
-        { name: "", Image: "", price: 599 },
-          { name: "", Image: "", price: 599 },
-            { name: "", Image: "", price: 599 },
-              { name: "", Image: "", price: 599 },
-                { name: "", Image: "", price: 599 },
-                  { name: "", Image: "", price: 599 },
-                    { name: "", Image: "", price: 599 },
-                      { name: "", Image: "", price: 599 },
-    
+    { name: " Nike Air Max ", Image: "  ", price: 2440  },
+    { name: "Adidas Ultraboost  ", Image: "  ", price: 2440  },
+    { name: "Puma RS-X ", Image: "  ", price: 2440  },
+    { name: "Reebok Classic Leather ", Image: "  ", price: 2440  },
+    { name: "Skechers D'Lites  ", Image: "  ", price: 2440  },
+    { name: " Converse Chuck Taylor All Star ", Image: "  ", price: 2440  },     
+    { name: " Vans Old Skool ", Image: "  ", price: 2440  },     
+    { name: "Gucci Ace Sneakers  ", Image: "  ", price: 2440  },  
+    { name: " Louis Vuitton Trainer Sneaker ", Image: "  ", price: 2440  },
+     { name: " Sparx   ", Image: "  ", price: 2440  },
 ];
 
 const cart = {};
