@@ -30,11 +30,13 @@
     <div class="cart-button position-relative">
   <button class="btn btn-warning bi bi-cart4 position-relative" data-bs-toggle="offcanvas" data-bs-target="#cartPanel">
     <span id="lblCount" class="badge bg-danger position-absolute rounded-circle">0</span>
+ 
+
   </button>
 </div>
 
 <!-- Offcanvas Cart Panel -->
-<div class="offcanvas offcanvas-end" tabindex="-1" id="cartPanel">
+<!-- <div class="offcanvas offcanvas-end" tabindex="-1" id="cartPanel">
   <div class="offcanvas-header">
     <h5 class="offcanvas-title">Your Cart</h5>
     <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
@@ -42,7 +44,7 @@
   <div class="offcanvas-body">
     <ul id="cartItems" class="list-group"></ul>
   </div>
-</div>
+</div> -->
 
 
   </div>
@@ -102,8 +104,9 @@
                 <h2>Shoes</h2>
             </div>
             <div class="item">
-                <img src="./cap.webp" alt="Electronics" title="Electronics">
-                <h2>Electronics</h2>
+              <a href="./Moblies/index.html"> 
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQmyjQy1ClPff-tj7ex2_XG0pGO77HruJqNw&s" alt="Moblies" title=" Moblies" width="100px" height="110px" style="border-radius:50px;"></a>
+                <h2>Moblies</h2>
             </div>
             <div class="item">
                 <img src="./kids.jpg" alt="Grocery" title="Grocery">
@@ -111,7 +114,7 @@
             </div>
             <div class="item">
                 <img src="./Jewellery.jpg" alt="Moblies " title="Moblies ">
-                <h2>Moblies </h2>
+                <h2> Electronics </h2>
             </div>
             <div class="item">
                 <img src="./other.webp" alt="Furniture" title="Furniture">
@@ -149,6 +152,9 @@
  
         <section id="products">
             <div class="product">
+                <div class="wishlist-icon" onclick="toggleWishlist(this)">
+                <i class="bi bi-heart"></i>
+                </div>
                 <img src="./81jVfiz5wPL._AC_UY1100_.jpg" alt="Suit">
                 <h2>Regular Men Suit</h2>
                 <p>Price: <span class="cost">₹12000</span>
@@ -157,6 +163,9 @@
 
             </div>
             <div class="product">
+               <div class="wishlist-icon" onclick="toggleWishlist(this)">
+                <i class="bi bi-heart"></i>
+                </div>
                 <img src="./Eww_SmallTalkMenHoodie_2_large.webp" alt="Suit">
                 <h2>Regular hoodies</h2>
                 <p>Price: <span class="cost">₹12000</span>
@@ -165,30 +174,42 @@
 
             </div>
             <div class="product">
+               <div class="wishlist-icon" onclick="toggleWishlist(this)">
+                <i class="bi bi-heart"></i>
+                </div>
                 <img src="./formal plain shits.webp" alt="Suit">
                 <h2>Regular formal </h2>
-                <p>Price: <span class="cost">₹12000</span>
-                    <span class="price">₹2500</span></p>
-               <button onclick="addToCart()">Add to cart</button>
-
-            </div>
-            <div class="product">
-                <img src="./tshirt.jpeg" alt="Suit">
-                <h2>Regular Tshits</h2>
                 <p>Price: <span class="cost">₹12000</span>
                     <span class="price">₹1500</span></p>
                <button onclick="addToCart()">Add to cart</button>
 
             </div>
             <div class="product">
-                <img src="./kurta.jpg" alt="Suit">
-                <h2>Regular Men kurta</h2>
+               <div class="wishlist-icon" onclick="toggleWishlist(this)">
+                <i class="bi bi-heart"></i>
+                </div>
+                <img src="./tshirt.jpeg" alt="Suit">
+                <h2>Regular Tshirts</h2>
                 <p>Price: <span class="cost">₹12000</span>
-                    <span class="price">₹2500</span></p>
+                    <span class="price">₹1000</span></p>
                <button onclick="addToCart()">Add to cart</button>
 
             </div>
             <div class="product">
+               <div class="wishlist-icon" onclick="toggleWishlist(this)">
+                <i class="bi bi-heart"></i>
+                </div>
+                <img src="./kurta.jpg" alt="Suit">
+                <h2>Regular Men kurta</h2>
+                <p>Price: <span class="cost">₹12000</span>
+                    <span class="price">₹3500</span></p>
+               <button onclick="addToCart()">Add to cart</button>
+
+            </div>
+            <div class="product">
+               <div class="wishlist-icon" onclick="toggleWishlist(this)">
+                <i class="bi bi-heart"></i>
+                </div>
                 <img src="./track pants.webp" alt="Suit">
                 <h2>Regular Men Track Pants</h2>
                 <p>Price: <span class="cost">₹12000</span>
@@ -197,6 +218,9 @@
 
             </div>
             <div class="product">
+               <div class="wishlist-icon" onclick="toggleWishlist(this)">
+                <i class="bi bi-heart"></i>
+                </div>
                 <img src="./jerkin.avif" alt="Suit">
                 <h2>Regular Men Jerkin</h2>
                 <p>Price: <span class="cost">₹12000</span>
@@ -205,6 +229,9 @@
 
             </div>
             <div class="product">
+               <div class="wishlist-icon" onclick="toggleWishlist(this)">
+                <i class="bi bi-heart"></i>
+                </div>
                 <img src="./Lalchi pyjama.jpeg" alt="Suit">
                 <h2>Regular Men Lalchi pyjama</h2>
                 <p>Price: <span class="cost">₹12000</span>
@@ -213,6 +240,9 @@
 
             </div>
             <div class="product">
+               <div class="wishlist-icon" onclick="toggleWishlist(this)">
+                <i class="bi bi-heart"></i>
+                </div>
                 <img src="./party wear.avif" alt="Suit">
                 <h2>Regular Men Party wear</h2>
                 <p>Price: <span class="cost">₹12000</span>
@@ -221,6 +251,9 @@
 
             </div>
             <div class="product">
+               <div class="wishlist-icon" onclick="toggleWishlist(this)">
+                <i class="bi bi-heart"></i>
+                </div>
                 <img src="./watch.avif" alt="Suit">
                 <h2>Regular Men watch</h2>
                 <p>Price: <span class="cost">₹12000</span>
@@ -229,6 +262,9 @@
 
             </div>
             <div class="product">
+               <div class="wishlist-icon" onclick="toggleWishlist(this)">
+                <i class="bi bi-heart"></i>
+                </div>
                 <img src="./bracelet.avif" alt="Suit">
                 <h2>Regular Men bracelet</h2>
                 <p>Price: <span class="cost">₹12000</span>
@@ -237,6 +273,10 @@
 
             </div>
             <div class="product">
+               <div class="wishlist-icon" onclick="toggleWishlist(this)">
+                <i class="bi bi-heart"></i>
+                </div>
+              
                 <img src="https://5.imimg.com/data5/SELLER/Default/2022/11/KE/VX/MV/116453489/white-casual-shoes-for-men-1000x1000.jpg" alt="Suit">
                 <h2>Regular Men Shoes</h2>
                 <p>Price: <span class="cost">₹12000</span>

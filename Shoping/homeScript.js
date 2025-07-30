@@ -54,3 +54,20 @@ let addToCart  = ()=>{ //"increment cart value"
   localStorage.setItem('cartCount',count)
 }
 
+
+  function toggleWishlist(el) {
+    el.classList.toggle("active");
+    const icon = el.querySelector("i");
+    if (el.classList.contains("active")) {
+      icon.classList.remove("bi-heart");
+      icon.classList.add("bi-heart-fill");
+    } else {
+      icon.classList.remove("bi-heart-fill");
+      icon.classList.add("bi-heart");
+    }
+  }
+ 
+
+
+
+  

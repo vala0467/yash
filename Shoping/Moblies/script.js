@@ -1,18 +1,82 @@
+// import {addToCart}from '../Test1.js';
 const dresses = [
-    { name: "Formal wear", Image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZysl2_QoBSXSZjh6-VAO4PJ2QejrJFx5uag&s", price: 599 },
-      { name: "Sports wear", Image: "https://madeinqatar.qa/wp-content/uploads/2024/02/b55.png", price: 1499 },
-        { name: "indo western", Image: "https://i.pinimg.com/736x/ff/22/75/ff227585e1ce8eb6a521d4b66a298c0e.jpg", price: 2599 },
-          { name: "American wear", Image: "https://i.pinimg.com/736x/9e/d4/bd/9ed4bd99558ffe0440bbd7ff6c8da6c3.jpg", price: 4599 },
-            { name: "Natual cotton shirt", Image: "https://apisap.fabindia.com/medias/20091729-01.jpg?context=bWFzdGVyfGltYWdlc3w5NDYwOHxpbWFnZS9qcGVnfGFEZzBMMmd4WVM4eE1ESXpNemszTURNME1EWTJNakl2TWpBd09URTNNamxmTURFdWFuQm58MGI2NTY4Mjg0ZTU4MGJlMjUyMTI3NGVlNmIzODIwZjk1Mzk2MWY2Y2I4NTE5YTViMzNlMzhlM2VhNjBmOGY4Mw&aio=w-768", price: 2499 },
-              { name: "Beige cotten Pant", Image: "https://apisap.fabindia.com/medias/20070588-01.jpg?context=bWFzdGVyfGltYWdlc3w3MDgwM3xpbWFnZS9qcGVnfGFHRTRMMmc1TVM4eE1ESXpNemszTURJd016QXpOall2TWpBd056QTFPRGhmTURFdWFuQm58M2VjZTQ2MTg1NTgyMDQ4NTU0YzUyMzFiOWU2ODZlMWU3MjkyMWRmMDY3ZmZlNGVhYmY3YzhmZjE4NDQ4N2U5YQ&aio=w-768", price: 3399 },
-                { name: "Wine cooton shirt", Image: "https://apisap.fabindia.com/medias/20216919-01.jpg?context=bWFzdGVyfGltYWdlc3w4MDEyMnxpbWFnZS9qcGVnfGFEUTJMMmhpTVM4NU9UYzJPRFUwT0RreE56STNPQzh5TURJeE5qa3hPVjh3TVM1cWNHY3w2Y2RkMzIxYzQwZmEwMDM1MjZkYzMzMGQ3ZDM4YTA4NTdkMWI3NTkwOGI2MzExYjVjYWEzMDJhMmNmOWFlYTQw&aio=w-768", price: 4699 },
-                  { name: "Black cotton", Image: "https://apisap.fabindia.com/medias/20229194-01.jpg?context=bWFzdGVyfGltYWdlc3wxMTcxNDl8aW1hZ2UvanBlZ3xhRFl5TDJobU15OHhNREUyTnpnM09UVXhNamc0TmpJdk1qQXlNamt4T1RSZk1ERXVhbkJufGMyOWVkNmYzYjE5ZTIwNDYwMWJjYmE3Y2JhODc5YzQ2MjcxNjNmZTgyZmRjYWQzM2FkMjc4OGVjNTVjMDMwYjI&aio=w-400", price: 1799 },
-                    { name: "Blue Cotton Ikat Shirt", Image: "https://apisap.fabindia.com/medias/20217300-01.jpg?context=bWFzdGVyfGltYWdlc3wxNDAzODN8aW1hZ2UvanBlZ3xhRGt4TDJoak1DODNPVGs0TURZMk1USXhNVEUyTmk4eU1ESXhOek13TUY4d01TNXFjR2N8ODZkNGQ4NDYxMWNmMTQwNmRiZjQxZmYzMmFhYTIyZjY1ODBmNDZlZmMyZDA0NDJmNzFjYjNkNjhjYjQ0OGE4MA&aio=w-768", price: 1599 },
-                      { name: "White Cotton Printed Shirt", Image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSvemZ1VFczpVl6QMG0lmC3wmHn1O-7e6qSdA&s", price: 2399 },
-    
+  {
+    name: " Samsung Galaxy S25 Ultra  ",
+    Image:
+      "https://m.media-amazon.com/images/I/71-d7XDbhIL._UF1000,1000_QL80_.jpg ",
+    price: 117999,
+  },
+   {
+    name: " Xiaomi 15 Ultra  ",
+    Image:
+      " https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTSZ0XpE00tVRfovtQVanyoise8QE_DGnke6g&s",
+    price: 109999,
+  },
+   {
+    name: " vivo X200 Pro  ",
+    Image:
+      " https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTVJZdk47iNwceELRkNBXWLz8NAHfyf1shWCw&s ",
+    price: 87980,
+  },
+   {
+    name: "  OPPO Find X8 Pro ",
+    Image:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTW_K_oH2ntv5-KXl6J_yBZEpugvJgH6kACw&s ",
+    price:  85000,
+  },
+   {
+    name: " Apple iPhone 16 Pro Max  ",
+    Image:
+      " https://www.designinfo.in/wp-content/uploads/2024/09/Apple-iPhone-16-Pro-128GB-Natural-Titanium-6.webp ",
+    price: 133900,
+  },
+   {
+    name: " OnePlus 13  ",
+    Image:
+      " https://image01-in.oneplus.net/media/202412/17/052a246708df8233d079b3502aeeb327.png ",
+    price: 67997,
+  },
+   {
+    name: " Motorola Razr 50 Ultra  ",
+    Image:
+      " https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSHUkVDdu-02CzPgU5m_dor-aYmG1lo2Qanpw&s ",
+    price: 99998,
+  },
+   {
+    name: " Samsung Galaxy S25 Edge ",
+    Image:
+      " https://m.media-amazon.com/images/I/71l8KLPYmWL._UF1000,1000_QL80_.jpg ",
+    price: 104999,
+  },
+   {
+    name: " Samsung Galaxy S25   ",
+    Image:
+      " https://images.samsung.com/is/image/samsung/p6pim/in/ps_2504/gallery/in-galaxy-s25-s937-sm-s937bzscins-thumb-546082704  ",
+    price:  80999,
+  },
+   {
+    name: " Google Pixel 9 Pro  ",
+    Image:
+      " https://i.guim.co.uk/img/media/2f6082f5edb313aa955a3df84e140f9854b4274e/84_124_5168_3100/master/5168.jpg?width=1200&height=900&quality=85&auto=format&fit=crop&s=32695a12c90e0cf21712e2ffafa24c39 ",
+    price: 99999,
+  },
+   {
+    name: " iQOO 13 ",
+    Image:
+      " https://m.media-amazon.com/images/I/51jAxBrJCtL.jpg ",
+    price: 55990 ,
+  },
+   {
+    name: "  	POCO F7 ",
+    Image:
+      " https://fdn.gsmarena.com/imgroot/news/25/06/poco-f7-specs-leak/popup/-x372/gsmarena_005.jpg ",
+    price: 31999,
+  },
 ];
+//import { addToCart, LoadCart } from '../Test1.js  '; // adjust path as needed
 
- const cart = {};
+// import addToCart from "../homeScript";
+const cart = {};
 
 const productGrid = document.getElementById("productGrid");
 const cartSection = document.getElementById("cartSection");
@@ -72,7 +136,7 @@ function renderProducts() {
         alert("Quantity must be greater than 0 to add to cart.");
       }
     };
-          // ❤️ Heart Icon
+      // ❤️ Heart Icon
       const heart = document.createElement("i");
       heart.className = "bi bi-heart heart-icon";
       heart.onclick = () => {
@@ -81,10 +145,10 @@ function renderProducts() {
       };
 
 
-      qtyLabel.appendChild(decBtn);
+   qtyLabel.appendChild(decBtn);
     qtyLabel.appendChild(qtySpan);
     qtyLabel.appendChild(incBtn);
- 
+    
     card.appendChild(heart);
     card.appendChild(img);
     card.appendChild(name);

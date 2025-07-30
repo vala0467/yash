@@ -136,11 +136,20 @@ function renderProducts() {
         alert("Quantity must be greater than 0 to add to cart.");
       }
     };
+          // ❤️ Heart Icon
+      const heart = document.createElement("i");
+      heart.className = "bi bi-heart heart-icon";
+      heart.onclick = () => {
+        heart.classList.toggle("bi-heart-fill");
+        heart.classList.toggle("bi-heart");
+      };
 
-    qtyLabel.appendChild(incBtn);
+
+      qtyLabel.appendChild(decBtn);
     qtyLabel.appendChild(qtySpan);
-    qtyLabel.appendChild(decBtn);
+    qtyLabel.appendChild(incBtn);
 
+    card.appendChild(heart);
     card.appendChild(img);
     card.appendChild(name);
     card.appendChild(price);

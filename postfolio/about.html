@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Bala Yaswanth</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #9ef2fa;
+        color: #333;
+      }
+
+      nav {
+        position: fixed;
+        top: 0;
+        right: 0;
+        height: 100%;
+        width: 220px;
+        background-color: #003049;
+        padding: 2rem 1rem;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1.5rem;
+      }
+
+      nav ul {
+        list-style: none;
+        width: 100%;
+      }
+
+      nav ul li {
+        margin-bottom: 1rem;
+      }
+
+      nav ul li a {
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+        display: block;
+        padding: 0.5rem;
+        transition: color 0.3s;
+      }
+
+      nav ul li a:hover,
+      nav ul li a.active {
+        color: #fcbf49;
+      }
+
+      main {
+        margin-right: 220px;
+        padding: 2rem;
+      }
+
+      /* ABOUT ME */
+      .about-section .aboutUs {
+        /* border: solid red; */
+        text-align: center;
+        font-size: 2rem;
+        margin-bottom: 2rem;
+      }
+
+      .about-section h1 span {
+        color: #d62828;
+      }
+
+      /* .about-content {
+        display: flex;
+        gap: 2rem;
+        flex-wrap: wrap;
+      } */
+
+      .about-container {
+        flex: 1;
+        min-width: 250px;
+      }
+
+      .about-container h1 {
+        font-size: 1.5rem;
+        color: #003049;
+        margin-bottom: 1rem;
+      }
+
+      .about-container p {
+        margin: 0.5rem 0;
+      }
+
+      .cv-button {
+        display: inline-block;
+        margin-top: 1.5rem;
+        padding: 0.7rem 1.5rem;
+        background-color: #00796b;
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+        border-radius: 6px;
+        transition: background-color 0.3s;
+      }
+
+      .cv-button:hover {
+        background-color: #004d40;
+      }
+
+      /* SKILLS SECTION */
+      .skill-section {
+        text-align: center;
+        margin-top: 4rem;
+      }
+
+      .skill-section h1 {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+      }
+
+      .skill-section h1 span {
+        color: #0077b6;
+      }
+
+      .skills-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 2rem;
+      }
+
+      .circle {
+        width: 120px;
+        height: 120px;
+        position: relative;
+      }
+
+      svg {
+        transform: rotate(-90deg);
+        width: 100%;
+        height: 100%;
+      }
+
+      .bg {
+        fill: none;
+        stroke: #ddd;
+        stroke-width: 3.8;
+      }
+
+      .progress {
+        fill: none;
+        stroke: #0077b6;
+        stroke-width: 3.8;
+        stroke-linecap: round;
+        transition: stroke-dasharray 0.6s ease;
+      }
+
+      .skill-label {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        text-align: center;
+        transform: translate(-50%, -50%);
+        font-size: 14px;
+        font-weight: bold;
+        color: #003049;
+      }
+
+      .skill-label span {
+        font-size: 16px;
+        color: #d62828;
+      }
+
+      /* Responsive */
+      @media (max-width: 768px) {
+        main {
+          margin-right: 0;
+        }
+
+        .about-content {
+          flex-direction: column;
+        }
+
+        nav {
+          position: static;
+          width: 100%;
+          height: auto;
+          flex-direction: row;
+          flex-wrap: wrap;
+          justify-content: center;
+        }
+      }
+      .about-content {
+        border: solid;
+        display: flex;
+        justify-content: space-around;
+        /* align-items: flex-start; */
+        gap: 2rem;
+        flex-wrap: wrap;
+        margin-top: 10px;
+      }
+
+      .about-container {
+        font-size: 1.5rem;
+        text-align: justify;
+        padding: 10px;
+        /* border: solid; */
+        min-width: 280px;
+        /* ensures left alignment */
+      }
+      .education-section {
+        margin-top: 4rem;
+        text-align: center;
+      }
+
+      .education-section h1 {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+      }
+
+      .education-section h1 span {
+        color: #f77f00;
+      }
+
+      .education-container {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        align-items: center;
+      }
+
+      .edu-item {
+        background-color: #fff;
+        border-left: 5px solid #003049;
+        padding: 1rem 2rem;
+        width: 100%;
+        max-width: 700px;
+        border-radius: 8px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        text-align: left;
+      }
+
+      .edu-item h2 {
+        color: #003049;
+        margin-bottom: 0.5rem;
+      }
+
+      .edu-item p {
+        margin: 0.3rem 0;
+      }
+      /* Toggle Button */
+      .nav-toggle {
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        z-index: 1001;
+        background: none;
+        border: none;
+        font-size: 1.8rem;
+        color: #003049;
+        cursor: pointer;
+        display: none;
+      }
+
+      /* Sidebar Navigation */
+      nav {
+        position: fixed;
+        top: 0;
+        right: 0;
+        height: 100%;
+        width: 220px;
+        background-color: #003049;
+        padding: 2rem 1rem;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1.5rem;
+        transition: transform 0.3s ease;
+        z-index: 1000;
+      }
+
+      nav ul {
+        list-style: none;
+        width: 100%;
+      }
+
+      nav ul li {
+        margin-bottom: 1rem;
+      }
+
+      nav ul li a {
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        transition: color 0.3s;
+        padding: 0.5rem 0.5rem;
+      }
+
+      nav ul li a:hover,
+      nav ul li a.active {
+        color: #fcbf49;
+      }
+    </style>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <button class="nav-toggle" onclick="toggleMenu()">☰</button>
+    <nav id="sidebar">
+      <ul>
+        <li>
+          <a href="index.html" class="active"
+            ><i class="fas fa-home"></i> Home</a
+          >
+        </li>
+        <li>
+          <a href="about.html"><i class="fas fa-user"></i> About</a>
+        </li>
+        <li>
+          <a href="projects.html"
+            ><i class="fas fa-briefcase"></i> My Portfolio</a
+          >
+        </li>
+        <li>
+          <a href="education.html"
+            ><i class="fas fa-certificate"></i> Certification</a
+          >
+        </li>
+        <li>
+          <a href="contact.html"><i class="fas fa-envelope"></i> Contact</a>
+        </li>
+      </ul>
+    </nav>
+
+    <main>
+      <!-- ABOUT ME SECTION -->
+      <section class="about-section">
+        <h1 class="aboutUs">ABOUT <span>ME</span></h1>
+        <h1>Personal Infos</h1>
+        <div class="about-content">
+          <div class="about-container">
+            <p><strong>First Name:</strong> Bala</p>
+            <p><strong>Last Name:</strong> Yaswanth</p>
+            <p><strong>Age:</strong> 22</p>
+            <p><strong>Nationality:</strong> Indian</p>
+            <a href="resume.pdf" class="cv-button" download>Download CV</a>
+          </div>
+          <div class="about-container">
+            <!-- optional empty heading to align spacing -->
+            <p><strong>City:</strong> Hyderabad</p>
+            <p><strong>Phone:</strong> +91 9876543210</p>
+            <p><strong>Email:</strong> abc@gmail.com</p>
+            <p><strong>Skype:</strong> abc</p>
+            <p><strong>Languages:</strong> English, Telugu, Hindi</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- SKILLS SECTION -->
+      <section class="skill-section">
+        <h1>MY <span>SKILLS</span></h1>
+        <div class="skills-container">
+          <!-- Repeat this block for each skill -->
+          <div class="circle">
+            <svg viewBox="0 0 36 36">
+              <path
+                class="bg"
+                d="M18 2.0845a15.9155 15.9155 0 1 1 0 31.831 a15.9155 15.9155 0 1 1 0 -31.831"
+              />
+              <path
+                class="progress"
+                stroke-dasharray="90, 100"
+                d="M18 2.0845 a15.9155 15.9155 0 1 1 0 31.831 a15.9155 15.9155 0 1 1 0 -31.831"
+              />
+            </svg>
+            <div class="skill-label">Java<br /><span>90%</span></div>
+          </div>
+
+          <div class="circle">
+            <svg viewBox="0 0 36 36">
+              <path
+                class="bg"
+                d="M18 2.0845a15.9155 15.9155 0 1 1 0 31.831 a15.9155 15.9155 0 1 1 0 -31.831"
+              />
+              <path
+                class="progress"
+                stroke-dasharray="95, 100"
+                d="M18 2.0845 a15.9155 15.9155 0 1 1 0 31.831 a15.9155 15.9155 0 1 1 0 -31.831"
+              />
+            </svg>
+            <div class="skill-label">HTML<br /><span>95%</span></div>
+          </div>
+
+          <div class="circle">
+            <svg viewBox="0 0 36 36">
+              <path
+                class="bg"
+                d="M18 2.0845a15.9155 15.9155 0 1 1 0 31.831 a15.9155 15.9155 0 1 1 0 -31.831"
+              />
+              <path
+                class="progress"
+                stroke-dasharray="85, 100"
+                d="M18 2.0845 a15.9155 15.9155 0 1 1 0 31.831 a15.9155 15.9155 0 1 1 0 -31.831"
+              />
+            </svg>
+            <div class="skill-label">CSS<br /><span>85%</span></div>
+          </div>
+
+          <div class="circle">
+            <svg viewBox="0 0 36 36">
+              <path
+                class="bg"
+                d="M18 2.0845a15.9155 15.9155 0 1 1 0 31.831 a15.9155 15.9155 0 1 1 0 -31.831"
+              />
+              <path
+                class="progress"
+                stroke-dasharray="70, 100"
+                d="M18 2.0845 a15.9155 15.9155 0 1 1 0 31.831 a15.9155 15.9155 0 1 1 0 -31.831"
+              />
+            </svg>
+            <div class="skill-label">JavaScript<br /><span>70%</span></div>
+          </div>
+
+          <div class="circle">
+            <svg viewBox="0 0 36 36">
+              <path
+                class="bg"
+                d="M18 2.0845a15.9155 15.9155 0 1 1 0 31.831 a15.9155 15.9155 0 1 1 0 -31.831"
+              />
+              <path
+                class="progress"
+                stroke-dasharray="75, 100"
+                d="M18 2.0845 a15.9155 15.9155 0 1 1 0 31.831 a15.9155 15.9155 0 1 1 0 -31.831"
+              />
+            </svg>
+            <div class="skill-label">MySQL<br /><span>75%</span></div>
+          </div>
+        </div>
+      </section>
+      <!-- EDUCATION SECTION -->
+      <section class="education-section">
+        <h1>MY <span>EDUCATION</span></h1>
+        <div class="education-container">
+          <div class="edu-item">
+            <h2>Bachelor in Computer Science</h2>
+            <p><strong>University:</strong> Vignan Degree Guntur</p>
+            <p><strong>Year:</strong> 2022 - 2025</p>
+          </div>
+          <div class="edu-item">
+            <h2>Intermediate (MPC)</h2>
+            <p><strong>College:</strong> Mahavir Memorial Junior College</p>
+            <p><strong>Year:</strong> 2020 - 2022</p>
+          </div>
+          <div class="edu-item">
+            <h2>SSC</h2>
+            <p><strong>School:</strong> Sri Majety High School</p>
+            <p><strong>Year:</strong> 2019 - 2020</p>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
