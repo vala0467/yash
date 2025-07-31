@@ -1,172 +1,107 @@
  
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f5f5f5;
+      color: #333;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
 
-body {
-  font-family: Arial, sans-serif;
-  background-color: #f5f5f5;
-  color: #333;
-  min-height: 100vh;
-  overflow-x: hidden;
-}
+    /* Toggle Button */
+    .nav-toggle {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      z-index: 1001;
+      background: none;
+      border: none;
+      font-size: 1.8rem;
+      color: #003049;
+      cursor: pointer;
+      display: none;
+    }
 
-/* Toggle Button */
-.nav-toggle {
-  position: fixed;
-  top: 20px;
-  right: 20px;
-  z-index: 1001;
-  background: none;
-  border: none;
-  font-size: 1.8rem;
-  color: #003049;
-  cursor: pointer;
-  display: none;
-}
-
-/* Sidebar Navigation */
-nav {
-  position: fixed;
-  top: 0;
-  right: 0;
-  height: 100%;
-  width: 220px;
-  background-color: #003049;
-  padding: 2rem 1rem;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 1.5rem;
-  transition: transform 0.3s ease;
-  z-index: 1000;
-}
-
-nav ul {
-  list-style: none;
-  width: 100%;
-}
-
-nav ul li {
-  margin-bottom: 1rem;
-}
-
-nav ul li a {
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  transition: color 0.3s;
-  padding: 0.5rem 0.5rem;
-}
-
-nav ul li a:hover,
-nav ul li a.active {
-  color: #fcbf49;
-}
-
-/* Main Content */
-/* main.center-content {
-      margin-right: 220px;
+    /* Sidebar Navigation */
+    nav {
+      position: fixed;
+      top: 0;
+      right: 0;
+      height: 100%;
+      width: 220px;
+      background-color: #003049;
+      padding: 2rem 1rem;
       display: flex;
       flex-direction: column;
-      justify-content: center;
+      align-items: flex-start;
+      gap: 1.5rem;
+      transition: transform 0.3s ease;
+      z-index: 1000;
+    }
+
+    nav ul {
+      list-style: none;
+      width: 100%;
+    }
+
+    nav ul li {
+      margin-bottom: 1rem;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      display: flex;
       align-items: center;
-      text-align: center;
-      padding: 2rem;
-      min-height: 100vh;
-    } */
-/* .img1 {
-  display: flex;
-  align-items: center;
-  text-align: center;
-  justify-content: center;
-  justify-content: space-between;
-}
+      gap: 0.5rem;
+      transition: color 0.3s;
+      padding: 0.5rem 0.5rem;
+    }
 
-.profile-img {
-  width: 200px;
-  height: 300px;
-  object-fit: cover;
-  border-radius: 8px;
-  margin-bottom: 20px;
-}
+    nav ul li a:hover,
+    nav ul li a.active {
+      color: #fcbf49;
+    }
 
-.text-content h1 {
-  font-size: 2rem;
-  margin-bottom: 10px;
-}
+    @media (max-width: 768px) {
+      .nav-toggle {
+        display: block;
+      }
 
-.text-content p {
-  font-size: 1.2rem;
-  color: #555;
-} */
+      nav {
+        transform: translateX(100%);
+      }
 
-.center-content {
-  width: 87%;
-  /* border: solid red; */
-  display: flex;
-  height: 100vh;
-}
+      nav.show {
+        transform: translateX(0%);
+      }
+    }
 
-.center-content > div {
-  /* border: solid; */
-  flex-basis: 50%;
-  display: flex;
-  align-items:center;
-  justify-content: center;
-}
-
-.center-content img{
-  height: 50%;
-  width: 50%;
-}
-
-.center-content .text-content{
-  flex-direction: column;
-  gap:10px;
-  align-items: start;
-  /* border: 10px solid blue; */
-}
-/* Slide Menu Hidden for Mobile */
-@media (max-width: 768px) {
-  .nav-toggle {
-    display: block;
-  }
-
-  nav {
-    transform: translateX(100%);
-  }
-
-  nav.show {
-    transform: translateX(0%);
-  }
-
-  main.center-content {
-    margin: 0;
-    padding: 3rem 1rem;
-  }
-}
-.contact-section {
+    /* Contact Section */
+    .contact-section {
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
-      padding: 80px 10%;
+      padding: 80px 13%;
+      
       background: linear-gradient(to right, #111, #1c1c1c);
     }
 
-    .contact-left, .contact-right {
+    .contact-left,
+    .contact-right {
       flex: 1 1 45%;
     }
 
     .contact-left h2 {
       font-size: 2.5rem;
       margin-bottom: 15px;
+      color: white;
     }
 
     .contact-left p {
@@ -176,31 +111,37 @@ nav ul li a.active {
       color: #ccc;
     }
 
-    .contact-left .info-block {
+    .info-block {
       display: flex;
       align-items: center;
       margin-bottom: 15px;
     }
 
-    .contact-left .info-block i {
+    .info-block i {
       font-size: 1.3rem;
       color: yellow;
       margin-right: 12px;
     }
 
-    .contact-left .info-block span {
+    .info-block span {
       font-weight: bold;
       display: block;
+      color: white;
     }
 
-    .contact-left .social-icons i {
+    .info-block small {
+      color: #ccc;
+    }
+
+    .social-icons i {
       margin-right: 15px;
       font-size: 1.2rem;
       cursor: pointer;
       transition: transform 0.3s ease;
+      color: white;
     }
 
-    .contact-left .social-icons i:hover {
+    .social-icons i:hover {
       transform: scale(1.2);
       color: yellow;
     }
@@ -209,6 +150,7 @@ nav ul li a.active {
       font-size: 4rem;
       margin-bottom: 40px;
       font-weight: 900;
+      color: white;
     }
 
     .contact-right h1 span {
@@ -222,7 +164,8 @@ nav ul li a.active {
       flex-wrap: wrap;
     }
 
-    .form-group input, .form-group textarea {
+    .form-group input,
+    .form-group textarea {
       flex: 1 1 100%;
       padding: 15px;
       border: none;
@@ -232,7 +175,8 @@ nav ul li a.active {
       font-size: 1rem;
     }
 
-    .form-group input::placeholder, .form-group textarea::placeholder {
+    .form-group input::placeholder,
+    .form-group textarea::placeholder {
       color: #aaa;
     }
 
@@ -276,3 +220,4 @@ nav ul li a.active {
         flex: 1 1 100%;
       }
     }
+ 
