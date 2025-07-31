@@ -125,6 +125,10 @@ nav ul li a.active {
 .center-content img{
   height: 50%;
   width: 50%;
+  border-bottom-left-radius: 20%;
+  border-bottom-right-radius: 20%;
+  border-top-left-radius: 20%;
+  border-top-right-radius: 20%;
 }
 
 .center-content .text-content{
