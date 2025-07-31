@@ -1,0 +1,111 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Bala Yaswanth</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <link rel="stylesheet" href="education.css">    
+</head>
+<body>
+   <button class="nav-toggle" onclick="toggleMenu()">☰</button>
+   <nav id="sidebar">
+      <ul>
+        <li>
+          <a href="index.html" class="active"
+            ><i class="fas fa-home"></i> Home</a
+          >
+        </li>
+        <li>
+          <a href="about.html"><i class="fas fa-user"></i> About</a>
+        </li>
+        <li>
+          <a href="project.html"
+            ><i class="fas fa-briefcase"></i> My Portfolio</a
+          >
+        </li>
+        <li>
+          <a href="education.html"
+            ><i class="fas fa-certificate"></i> Certification </a
+          >
+        </li>
+        <li>
+          <a href="contact.html"><i class="fas fa-envelope"></i> Contact</a>
+        </li>
+      </ul>
+    </nav>
+
+  <section class="certification-section">
+    <h1>MY <span>CERTIFICATIONS</span></h1>
+    <div class="certification-container">
+
+      <div class="cert-card">
+        <img src="Certificate1.jpg" alt="Certificate 1">
+        <div class="cert-details"> 
+          <!-- h2>Artificial Intelligence Fundamentals</h2 -->
+          <p><!--strong>Issued by:</strong--> IBM</p>
+          <!--p><strong>Year:</strong> 2025</p-->
+        </div>
+      </div>
+
+      <div class="cert-card">
+        <img src="Certificate2.jpg" alt="Certificate 2">
+        <div class="cert-details">
+          <!--h2>Customer Engagement: Problem Solving</h2-->
+          <p><!--strong>Issued by:</strong--> IBM</p>
+          <!--p><strong>Year:</strong> 2025</p-->
+        </div>
+      </div>
+
+      <div class="cert-card">
+        <img src="Certificate3.jpg" alt="Certificate 3">
+        <div class="cert-details">
+          <!--h2>Communication & Personality Dynamics</h2-->
+          <p><!--strong>Issued by:</strong--> IBM</p>
+          <!--p><strong>Year:</strong> 2025</p-->
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <script>
+    const cards = document.querySelectorAll('.cert-card');
+
+    function getDirection(e, card) {
+      const rect = card.getBoundingClientRect();
+      const x = e.clientX - rect.left - rect.width / 2;
+      const y = e.clientY - rect.top - rect.height / 2;
+      const angle = Math.atan2(y, x) * (180 / Math.PI);
+      
+      if (angle >= -45 && angle <= 45) return 'right';
+      if (angle > 45 && angle < 135) return 'bottom';
+      if (angle >= 135 || angle <= -135) return 'left';
+      return 'top';
+    }
+
+    cards.forEach(card => {
+      const details = card.querySelector('.cert-details');
+
+      card.addEventListener('mouseenter', e => {
+        const direction = getDirection(e, card);
+        details.classList.remove('from-left', 'from-right', 'from-top', 'from-bottom', 'in-view');
+        details.classList.add(`from-${direction}`);
+
+        // Trigger reflow before adding in-view
+        void details.offsetWidth;
+        details.classList.add('in-view');
+      });
+
+      card.addEventListener('mouseleave', () => {
+        details.classList.remove('in-view');
+      });
+    });
+     function toggleMenu() {
+        document.getElementById("sidebar").classList.toggle("show");
+      }
+  </script>
+
+</body>
+</html>
+
