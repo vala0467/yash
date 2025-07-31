@@ -1,0 +1,97 @@
+ <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bala Yaswanth</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+     
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <button class="nav-toggle" onclick="toggleMenu()">☰</button>
+
+    <nav id="sidebar">
+      <ul>
+        <li>
+          <a href="index.html" class="active"
+            ><i class="fas fa-home"></i> Home</a
+          >
+        </li>
+        <li>
+          <a href="about.html"><i class="fas fa-user"></i> About</a>
+        </li>
+        <li>
+          <a href="project.html"
+            ><i class="fas fa-briefcase"></i> My Portfolio</a
+          >
+        </li>
+        <li>
+          <a href="education.html"
+            ><i class="fas fa-certificate"></i> Certification </a
+          >
+        </li>
+        <li>
+          <a href="contact.html"><i class="fas fa-envelope"></i> Contact</a>
+        </li>
+      </ul>
+    </nav>
+<section class="contact-section">
+  <!-- Left Side -->
+  <div class="contact-left">
+    <h2>PING ME!</h2>
+    <p>Feel free to get in touch with me. I am always open to discussing new projects, creative ideas or opportunities to be part of your visions.</p>
+
+    <div class="info-block">
+      <i class="fas fa-envelope"></i>
+      <div>
+        <span>MAIL ME</span>
+        <small>satyasundar.kat@gmail.com</small>
+      </div>
+    </div>
+
+    <div class="info-block">
+      <i class="fas fa-phone"></i>
+      <div>
+        <span>CALL ME</span>
+        <small>+91 98765 43210</small>
+      </div>
+    </div>
+
+    <div class="social-icons">
+      <i class="fab fa-instagram"></i>
+      <i class="fab fa-facebook"></i>
+      <i class="fab fa-github"></i>
+      <i class="fab fa-linkedin"></i>
+    </div>
+  </div>
+
+  <!-- Right Side -->
+  <div class="contact-right">
+    <h1>GET IN <span>TOUCH</span></h1>
+
+    <form>
+      <div class="form-group">
+        <input type="text" placeholder="YOUR NAME" required />
+        <input type="email" placeholder="YOUR EMAIL" required />
+        <input type="text" placeholder="YOUR SUBJECT" />
+      </div>
+      <div class="form-group">
+        <textarea placeholder="YOUR MESSAGE" required></textarea>
+      </div>
+      <button type="submit" class="submit-btn">SEND MESSAGE</button>
+    </form>
+  </div>
+</section>
+    
+
+    <script>
+      function toggleMenu() {
+        document.getElementById("sidebar").classList.toggle("show");
+      }
+    </script>
+  </body>
+</html>
