@@ -1,68 +1,121 @@
- <!DOCTYPE html>
+<!-- !DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Bala Yaswanth</title>
+  <title>  Bala Yaswanth</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
-  <link rel="stylesheet" href="education.css">    
+
+  <link rel="stylesheet" href="education.css">
 </head>
 <body>
-   <button class="nav-toggle" onclick="toggleMenu()">☰</button>
-   <nav id="sidebar">
-      <ul>
-        <li>
-          <a href="index.html" class="active"
-            ><i class="fas fa-home"></i> Home</a
-          >
-        </li>
-        <li>
-          <a href="about.html"><i class="fas fa-user"></i> About</a>
-        </li>
-        <li>
-          <a href="project.html"
-            ><i class="fas fa-briefcase"></i> My Portfolio</a
-          >
-        </li>
-        <li>
-          <a href="education.html"
-            ><i class="fas fa-certificate"></i> Certification </a
-          >
-        </li>
-        <li>
-          <a href="contact.html"><i class="fas fa-envelope"></i> Contact</a>
-        </li>
-      </ul>
-    </nav>
 
+  <section class="certification-section">
+    <h1>MY <span>CERTIFICATIONS</span></h1>
+    <div class="certification-container">
+ <div class="cert-card slide-down">
+  <h2>Artificial Intelligence Fundamentals</h2>
+    <img src=" " alt=" " height="250px" width="250px">
+  <p><strong>Issued by:</strong> IBM</p>
+  <p><strong>Year:</strong> 2025</p>
+</div>
+
+      <div class="cert-card slide-up">
+        <h2>Customer Engagement: Problem Solving and Process Controls</h2>
+        <img src="" alt="">
+        <p><strong>Issued by:</strong>IBM</p>
+        <p><strong>Year:</strong> 2025</p>
+      </div>
+
+      <div class="cert-card left-right">
+        <h2>Customer Engagement: Communication and Personality Dynamics</h2>
+        <p><strong>Issued by:</strong> Customer Engagement: Communication and Personality Dynamics</p>
+        <p><strong>Year:</strong> 2025</p>
+      </div>
+    </div>
+  </section>
+
+</body>
+</html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Bala Yaswanth | Certifications</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <link rel="stylesheet" href="education.css">
+</head>
+<body>
+
+  <!-- Toggle Button for Mobile -->
+  <button class="nav-toggle" onclick="toggleMenu()">☰</button>
+
+  <!-- Sidebar Navigation -->
+  <nav id="sidebar">
+    
+    <ul>
+    <div class="sidebar">
+          <div class="icon">
+            <aside class="display_icon">Home</aside>
+            <a href="index.html" class="display_anchor"
+              ><i class="fas fa-home"></i
+            ></a>
+          </div>
+          <div class="icon">
+            <aside class="display_icon">About</aside>
+
+            <a href="about.html" class="display_anchor "> <i class="fas fa-user"></i></a>
+          </div>
+          <div class="icon">
+            <aside class="display_icon">Postfolio</aside>
+
+            <a href="project.html" class="display_anchor"><i class="fas fa-briefcase"></i></a>
+          </div>
+          <div class="icon">
+            <aside class="display_icon">Certification</aside>
+
+            <a href="education.html"  class="display_anchor "
+              ><i class="fas fa-cogs"></i
+            ></a>
+          </div>
+          <div class="icon">
+            <aside class="display_icon">Contact</aside>
+
+            <a href="contact.html"  class="display_anchor"><i class="fas fa-envelope"></i></a>
+          </div>
+    </ul>
+  </nav>
+
+  <!-- Certifications Section -->
   <section class="certification-section">
     <h1>MY <span>CERTIFICATIONS</span></h1>
     <div class="certification-container">
 
       <div class="cert-card">
         <img src="Certificate1.jpg" alt="Certificate 1">
-        <div class="cert-details"> 
-          <!-- h2>Artificial Intelligence Fundamentals</h2 -->
-          <p><!--strong>Issued by:</strong--> IBM</p>
-          <!--p><strong>Year:</strong> 2025</p-->
+        <div class="cert-details">
+          <p>Artificial Intelligence Fundamentals</p>
+          <p><strong>Issued by:</strong> IBM</p>
+          <p><strong>Year:</strong> 2025</p>
         </div>
       </div>
 
       <div class="cert-card">
         <img src="Certificate2.jpg" alt="Certificate 2">
         <div class="cert-details">
-          <!--h2>Customer Engagement: Problem Solving</h2-->
-          <p><!--strong>Issued by:</strong--> IBM</p>
-          <!--p><strong>Year:</strong> 2025</p-->
+          <p>Customer Engagement: Problem Solving</p>
+          <p><strong>Issued by:</strong> IBM</p>
+          <p><strong>Year:</strong> 2025</p>
         </div>
       </div>
 
       <div class="cert-card">
         <img src="Certificate3.jpg" alt="Certificate 3">
         <div class="cert-details">
-          <!--h2>Communication & Personality Dynamics</h2-->
-          <p><!--strong>Issued by:</strong--> IBM</p>
-          <!--p><strong>Year:</strong> 2025</p-->
+          <p>Communication & Personality Dynamics</p>
+          <p><strong>Issued by:</strong> IBM</p>
+          <p><strong>Year:</strong> 2025</p>
         </div>
       </div>
 
@@ -70,6 +123,7 @@
   </section>
 
   <script>
+    // Direction-based animation
     const cards = document.querySelectorAll('.cert-card');
 
     function getDirection(e, card) {
@@ -77,7 +131,6 @@
       const x = e.clientX - rect.left - rect.width / 2;
       const y = e.clientY - rect.top - rect.height / 2;
       const angle = Math.atan2(y, x) * (180 / Math.PI);
-      
       if (angle >= -45 && angle <= 45) return 'right';
       if (angle > 45 && angle < 135) return 'bottom';
       if (angle >= 135 || angle <= -135) return 'left';
@@ -91,9 +144,7 @@
         const direction = getDirection(e, card);
         details.classList.remove('from-left', 'from-right', 'from-top', 'from-bottom', 'in-view');
         details.classList.add(`from-${direction}`);
-
-        // Trigger reflow before adding in-view
-        void details.offsetWidth;
+        void details.offsetWidth; // trigger reflow
         details.classList.add('in-view');
       });
 
@@ -101,11 +152,12 @@
         details.classList.remove('in-view');
       });
     });
-     function toggleMenu() {
-        document.getElementById("sidebar").classList.toggle("show");
-      }
+
+    // Sidebar toggle
+    function toggleMenu() {
+      document.getElementById("sidebar").classList.toggle("show");
+    }
   </script>
 
 </body>
 </html>
-

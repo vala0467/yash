@@ -8,33 +8,43 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
-    <link rel="stylesheet" href="about.css">
+    <link rel="stylesheet" href="about.css" />
   </head>
   <body>
     <button class="nav-toggle" onclick="toggleMenu()">☰</button>
     <nav id="sidebar">
+      <!-- <button class="close-btn" onclick="toggleMenu()">✖</button> -->
       <ul>
-        <li>
-          <a href="index.html" class="active"
-            ><i class="fas fa-home"></i> Home</a
-          >
-        </li>
-        <li>
-          <a href="about.html"><i class="fas fa-user"></i> About</a>
-        </li>
-        <li>
-          <a href="project.html"
-            ><i class="fas fa-briefcase"></i> My Portfolio</a
-          >
-        </li>
-        <li>
-          <a href="education.html"
-            ><i class="fas fa-certificate"></i> Certification</a
-          >
-        </li>
-        <li>
-          <a href="contact.html"><i class="fas fa-envelope"></i> Contact</a>
-        </li>
+        <div class="sidebar">
+          <div class="icon">
+            <aside class="display_icon">Home</aside>
+            <a href="index.html" class="display_anchor"
+              ><i class="fas fa-home"></i
+            ></a>
+          </div>
+          <div class="icon">
+            <aside class="display_icon">About</aside>
+
+            <a href="about.html" class="display_anchor "> <i class="fas fa-user"></i></a>
+          </div>
+          <div class="icon">
+            <aside class="display_icon">Postfolio</aside>
+
+            <a href="project.html" class="display_anchor"><i class="fas fa-briefcase"></i></a>
+          </div>
+          <div class="icon">
+            <aside class="display_icon">Certification</aside>
+
+            <a href="education.html"  class="display_anchor "
+              ><i class="fas fa-cogs"></i
+            ></a>
+          </div>
+          <div class="icon">
+            <aside class="display_icon">contact</aside>
+
+            <a href="contact.html"  class="display_anchor"><i class="fas fa-envelope"></i></a>
+          </div>
+        </div>
       </ul>
     </nav>
 
@@ -164,7 +174,7 @@
         </div>
       </section>
     </main>
-      <script>
+    <script>
       function toggleMenu() {
         document.getElementById("sidebar").classList.toggle("show");
       }
