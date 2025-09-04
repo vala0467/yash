@@ -1,5 +1,5 @@
 // import {addToCart}from '../Test1.js';
-const dresses = [
+const moblies = [
   {
     name: " Samsung Galaxy S25 Ultra  ",
     Image:
@@ -82,21 +82,21 @@ const productGrid = document.getElementById("productGrid");
 const cartSection = document.getElementById("cartSection");
 
 function renderProducts() {
-  dresses.forEach((dress, index) => {
+  moblies.forEach(( moblie, index) => {
     const card = document.createElement("div");
     card.className = "product-card";
 
     const img = document.createElement("img");
-    img.src = dress.Image;
-    img.alt = dress.name;
+    img.src = moblie.Image;
+    img.alt = moblie.name;
 
     const name = document.createElement("div");
     name.className = "product-name";
-    name.textContent = dress.name;
+    name.textContent = moblie.name;
 
     const price = document.createElement("div");
     price.className = "product-price";
-    price.textContent = `₹${dress.price}`;
+    price.textContent = `₹${moblie.price}`;
 
     const qtyLabel = document.createElement("div");
     qtyLabel.textContent = "Qty: ";
@@ -125,8 +125,8 @@ function renderProducts() {
     addToCartBtn.onclick = () => {
       const qty = parseInt(qtySpan.textContent);
       if (qty > 0) {
-        cart[dress.name] = {
-          ...dress,
+        cart[moblie.name] = {
+          ...moblie,
           quantity: qty,
         };
         addToCart();

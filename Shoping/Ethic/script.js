@@ -1,14 +1,64 @@
 const dresses = [
-    { name: "Casual Dress", Image: "https://www.beyoung.in/blog/wp-content/uploads/2020/04/SEMI-CASUAL1-compressed-931x1024.jpg", price: 499 },
-    { name: "Formal Dress", Image: "https://i.pinimg.com/736x/71/c5/c6/71c5c656c4e04e24b8c40fdbd72b401b.jpg", price: 799 },
-    { name: "Party Dress", Image: "https://bharatreshma.com/cdn/shop/files/H2_5_960x_crop_center.jpg?v=1726998043", price: 999 },
-    { name: "Traditional Dress", Image: "https://static.wixstatic.com/media/253962_b19a61cfc97442f4b13661b0ae58d74c~mv2.jpg/v1/fill/w_727,h_1000,al_c,q_85,usm_0.66_1.00_0.01/253962_b19a61cfc97442f4b13661b0ae58d74c~mv2.jpg", price: 899 },
-    { name: "Wedding Dress", Image: "https://i.pinimg.com/236x/95/95/2f/95952f844e03fc88e66e60d964d739cd.jpg", price: 1999 },
-    { name: "Summer Dress", Image: "https://cdn.shopify.com/s/files/1/0094/6326/7379/files/polos_600x600.png?v=1647241937", price: 599 },
-     { name: " Sherwani", Image:  "https://cdn.sareeka.com/image/cache/data2024/purple-rayon-buttons-and-plain-work-sherwani-mens-wear-for-men-297763-1000x1375.jpg", price: 899 },
-      { name: " Nehru", Image: "https://imagescdn.jaypore.com/img/app/product/3/39626900-12923641.jpg?w=500&auto=format ", price: 699 },
-       { name: "Pathani suit ", Image: " https://i.pinimg.com/736x/23/97/6d/23976d21f46fdd3f6eb2ddab96888d41.jpg ", price: 799 },
-        { name: "Achkan ", Image: "https://needlesnthimbles.com/wp-content/uploads/2022/01/content_Achkan-Sherwani.jpg ", price: 1199 },
+  {
+    name: "Casual Dress",
+    Image:
+      "https://www.beyoung.in/blog/wp-content/uploads/2020/04/SEMI-CASUAL1-compressed-931x1024.jpg",
+    price: 499,
+  },
+  {
+    name: "Formal Dress",
+    Image:
+      "https://i.pinimg.com/736x/71/c5/c6/71c5c656c4e04e24b8c40fdbd72b401b.jpg",
+    price: 799,
+  },
+  {
+    name: "Party Dress",
+    Image:
+      "https://bharatreshma.com/cdn/shop/files/H2_5_960x_crop_center.jpg?v=1726998043",
+    price: 999,
+  },
+  {
+    name: "Traditional Dress",
+    Image:
+      "https://static.wixstatic.com/media/253962_b19a61cfc97442f4b13661b0ae58d74c~mv2.jpg/v1/fill/w_727,h_1000,al_c,q_85,usm_0.66_1.00_0.01/253962_b19a61cfc97442f4b13661b0ae58d74c~mv2.jpg",
+    price: 899,
+  },
+  {
+    name: "Wedding Dress",
+    Image:
+      "https://i.pinimg.com/236x/95/95/2f/95952f844e03fc88e66e60d964d739cd.jpg",
+    price: 1999,
+  },
+  {
+    name: "Summer Dress",
+    Image:
+      "https://cdn.shopify.com/s/files/1/0094/6326/7379/files/polos_600x600.png?v=1647241937",
+    price: 599,
+  },
+  {
+    name: " Sherwani",
+    Image:
+      "https://cdn.sareeka.com/image/cache/data2024/purple-rayon-buttons-and-plain-work-sherwani-mens-wear-for-men-297763-1000x1375.jpg",
+    price: 899,
+  },
+  {
+    name: " Nehru",
+    Image:
+      "https://imagescdn.jaypore.com/img/app/product/3/39626900-12923641.jpg?w=500&auto=format ",
+    price: 699,
+  },
+  {
+    name: "Pathani suit ",
+    Image:
+      " https://i.pinimg.com/736x/23/97/6d/23976d21f46fdd3f6eb2ddab96888d41.jpg ",
+    price: 799,
+  },
+  {
+    name: "Achkan ",
+    Image:
+      "https://needlesnthimbles.com/wp-content/uploads/2022/01/content_Achkan-Sherwani.jpg ",
+    price: 1199,
+  },
 ];
 
 const cart = {};
@@ -71,20 +121,19 @@ function renderProducts() {
         alert("Quantity must be greater than 0 to add to cart.");
       }
     };
-      //   // ❤️ Heart Icon
-      // const heart = document.createElement("i");
-      // heart.className = "bi bi-heart heart-icon";
-      // heart.onclick = () => {
-      //   heart.classList.toggle("bi-heart-fill");
-      //   heart.classList.toggle("bi-heart");
-      // };
-      const heart = document.createElement("i");
-heart.className = "bi bi-heart heart-icon";
-heart.onclick = () => {
-  heart.classList.toggle("bi-heart-fill");
-  heart.classList.toggle("bi-heart");
-};
-
+    //   // ❤️ Heart Icon
+    // const heart = document.createElement("i");
+    // heart.className = "bi bi-heart heart-icon";
+    // heart.onclick = () => {
+    //   heart.classList.toggle("bi-heart-fill");
+    //   heart.classList.toggle("bi-heart");
+    // };
+    const heart = document.createElement("i");
+    heart.className = "bi bi-heart heart-icon";
+    heart.onclick = () => {
+      heart.classList.toggle("bi-heart-fill");
+      heart.classList.toggle("bi-heart");
+    };
 
     qtyLabel.appendChild(decBtn);
     qtyLabel.appendChild(qtySpan);

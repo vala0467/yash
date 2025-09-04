@@ -17,7 +17,7 @@ header {
     background-color: var(--primary-color);
     color: white;
     font-size: 32px;
-    font-family: "Dancing Script", cursive;
+    font-family: cursive;
     padding: 10px 20px;
     
     position: fixed;
@@ -136,7 +136,7 @@ header>h2{
 }
 footer{
     background-color: var(--secondary-color);
-    color: white;
+    color: rgb(245, 246, 246);
     text-align: center;
 }
 .carousel-item active{

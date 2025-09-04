@@ -4,50 +4,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Clothing store</title>
-     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
-      <!--link rel="stylesheet" href="./bootstrap"-->
-      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <!--link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+     
     <link rel="stylesheet" href="./style.css">
     <link rel="shortcut icon" href="./logo.jpg" type="image/x-icon">
       
 </head>
 <body>
  
-  <header>
-  <div>
-    <button class="bi bi-justify btn btn-light" data-bs-toggle="offcanvas" data-bs-target="#menu" >
-      <span class="fs-5 fw-bold"> Yaswanth</span>
+ <header>
+  <div> 
+   <button class="btn btn-light" data-bs-toggle="offcanvas" data-bs-target="#menu">
+     <i class="bi bi-list fs-3"></i> <span class="fs-5 fw-bold">Yaswanth</span>
     </button>
   </div>
 
   <div class="ms-auto d-flex align-items-center gap-3">
-    <span><a class="text-decoration-none link-dark" href="javascript:LoadProducts('http://127.0.0.2:5500/JavaScript/project/clothing-store/index.html ')">Home</a></span>
-    <span><a class="text-decoration-none link-dark" href="javascript:LoadProducts(' ')">Product</a></span>
-    <span><a class="text-decoration-none link-dark" href="javascript:LoadProducts('  ')">Wishlist</a></span>
-    
+    <span>
+     <a class="text-decoration-none link-dark" href="javascript:LoadProducts('home')">Home</a>
+    </span>
+    <span>
+      <a class="text-decoration-none link-dark" href="javascript:LoadProducts('product')">Your Or</a>
+    </span>
+  
+    <span>
+      <a class="text-decoration-none link-dark" href="javascript:LoadProducts('wishlist')">Wishlist</a>
+    </span>
+
     <div class="cart-button position-relative">
-  <button class="btn btn-warning bi bi-cart4 position-relative" data-bs-toggle="offcanvas" data-bs-target="#cartPanel">
-    <span id="lblCount" class="badge bg-danger position-absolute rounded-circle">0</span>
- 
-
-  </button>
-</div>
-
-<!-- Offcanvas Cart Panel -->
-<!-- <div class="offcanvas offcanvas-end" tabindex="-1" id="cartPanel">
-  <div class="offcanvas-header">
-    <h5 class="offcanvas-title">Your Cart</h5>
-    <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
-  </div>
-  <div class="offcanvas-body">
-    <ul id="cartItems" class="list-group"></ul>
-  </div>
-</div> -->
-
-
-  </div>
+      <button class="btn btn-warning bi bi-cart4 position-relative" data-bs-toggle="offcanvas" data-bs-target="#cartPanel">
+        <span id="lblCount" class="badge bg-danger position-absolute rounded-circle">0</span>
+      </button>
+  </div> 
 </header>
  
      <div id="carouselExample" class="carousel slide">
@@ -109,15 +99,18 @@
                 <h2>Moblies</h2>
             </div>
             <div class="item">
-                <img src="./kids.jpg" alt="Grocery" title="Grocery">
+              <a href="./Grocery/index.html">
+                <img src="https://assets.aboutamazon.com/dims4/default/d573e3b/2147483647/strip/false/crop/1320x743+0+0/resize/1320x743!/quality/90/?url=https%3A%2F%2Famazon-blogs-brightspot.s3.amazonaws.com%2F92%2F06%2Fbb204a6842a49e7bdc66523a070c%2Fblog2.jpg" alt="Grocery" title="Grocery" width="100px" height="110px" style="border-radius:50px;"></a>
                 <h2> Grocery</h2>
             </div>
             <div class="item">
-                <img src="./Jewellery.jpg" alt="Moblies " title="Moblies ">
+              <a href="./Electronics/index.html">
+                <img src=" https://www.shutterstock.com/image-vector/electronics-text-assorted-devices-floating-260nw-2271252449.jpg" alt="Moblies " title="Moblies "  width="100px" height="110px" style="border-radius:50px;"></a>
                 <h2> Electronics </h2>
             </div>
             <div class="item">
-                <img src="./other.webp" alt="Furniture" title="Furniture">
+              <a href="./Furniture/index.html"> 
+                <img src="https://www.vedantu.com/seo/content-images/2246e9ae-4ca6-4224-b377-f06d7aa018f3.png" alt="Furniture" title="Furniture"  width="100px" height="110px" style="border-radius:50px;"></a>
                 <h2>Furniture</h2>
             </div>
             
@@ -149,7 +142,7 @@
   }, 1000);
 </script>
 
- 
+    <main>
         <section id="products">
             <div class="product">
                 <div class="wishlist-icon" onclick="toggleWishlist(this)">
@@ -284,7 +277,7 @@
                <button onclick="addToCart()">Add to cart</button>
 
             </div>
-        
+        </section>
     </main>
    <script  src="./homeScript.js"></script>
     <script>

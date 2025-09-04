@@ -1,11 +1,65 @@
 // import {addToCart}from '../Test1.js';
-const dresses = [
-  {
-    name: " Samsung Galaxy S25 Ultra  ",
-    Image:
-      "https://m.media-amazon.com/images/I/71-d7XDbhIL._UF1000,1000_QL80_.jpg ",
-    price: 117999,
+const  groceres = [
+ {
+    name: "India Gate Basmati Rice - 5kg",
+    Image: "https://m.media-amazon.com/images/I/413ddhGiWmL._SX300_SY300_QL70_FMwebp_.jpg",
+    price: 599,
   },
+  {
+    name: "Tata Salt - 1kg",
+    Image: "https://m.media-amazon.com/images/I/614mm2hYHyL.jpg",
+    price: 25,
+  },
+  {
+    name: "Fortune Sunflower Oil - 1L",
+    Image: "https://5.imimg.com/data5/SELLER/Default/2021/6/FH/IP/UF/45780338/1-litre-fortune-refined-sunflower-oil-1000x1000.jpg",
+    price: 130,
+  },
+  {
+    name: "Aashirvaad Atta - 5kg",
+    Image: "https://www.bbassets.com/media/uploads/p/l/204629_23-aashirvaad-select-atta.jpg",
+    price: 260,
+  },
+  {
+    name: "Maggi 2-Minute Noodles - 560g (Pack of 8)",
+    Image: "https://homedelivery.ramachandran.in/media/catalog/product/cache/04c5c5c4276fe9dba74400abc896c29c/7/1/71hap8mqgsl._sl1500_.jpg",
+    price: 110,
+  },
+  {
+    name: "Amul Taaza Milk - 1L",
+    Image: "https://www.bbassets.com/media/uploads/p/l/306926_4-amul-homogenised-toned-milk.jpg",
+    price: 66,
+  },
+  {
+    name: "Tata Tea Gold - 1kg",
+    Image: "https://m.media-amazon.com/images/I/61r35uDpV4L._UF350,350_QL80_.jpg",
+    price: 540,
+  },
+  {
+    name: "Parle-G Biscuits - 800g",
+    Image: "https://www.jiomart.com/images/product/original/492490082/parle-g-original-gluco-biscuit-200-g-product-images-o492490082-p591542736-0-202205231809.jpg",
+    price: 65,
+  },
+  {
+    name: "Dettol Antiseptic Liquid - 500ml",
+    Image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ2r7zoO36KcNMQtwHgjTTgZq9PplYfCeiGSg&s",
+    price: 165,
+  },
+  {
+    name: "Colgate Strong Teeth Toothpaste - 200g",
+    Image: "https://images-eu.ssl-images-amazon.com/images/I/61XMUdBuJ6L._AC_UL600_SR600,600_.jpg",
+    price: 95,
+  },
+  {
+    name: "Dabur Honey - 500g",
+    Image: "https://m.media-amazon.com/images/I/41RhjqOCLEL._SX300_SY300_QL70_FMwebp_.jpg",
+    price: 199,
+  },
+  {
+    name: "Surf Excel Matic Top Load - 2kg",
+    Image: "https://m.media-amazon.com/images/I/413qfrhdNHL._SX300_SY300_QL70_FMwebp_.jpg",
+    price: 410,
+  }
    
 ];
 //import { addToCart, LoadCart } from '../Test1.js  '; // adjust path as needed
@@ -17,21 +71,21 @@ const productGrid = document.getElementById("productGrid");
 const cartSection = document.getElementById("cartSection");
 
 function renderProducts() {
-  dresses.forEach((dress, index) => {
+  groceres .forEach((grocery, index) => {
     const card = document.createElement("div");
     card.className = "product-card";
 
     const img = document.createElement("img");
-    img.src = dress.Image;
-    img.alt = dress.name;
+    img.src = grocery.Image;
+    img.alt =grocery.name;
 
     const name = document.createElement("div");
     name.className = "product-name";
-    name.textContent = dress.name;
+    name.textContent = grocery.name;
 
     const price = document.createElement("div");
     price.className = "product-price";
-    price.textContent = `₹${dress.price}`;
+    price.textContent = `₹${grocery.price}`;
 
     const qtyLabel = document.createElement("div");
     qtyLabel.textContent = "Qty: ";
@@ -60,8 +114,8 @@ function renderProducts() {
     addToCartBtn.onclick = () => {
       const qty = parseInt(qtySpan.textContent);
       if (qty > 0) {
-        cart[dress.name] = {
-          ...dress,
+        cart[grocery.name] = {
+          ...grocery,
           quantity: qty,
         };
         addToCart();

@@ -1,64 +1,65 @@
-const  watches = [
-  {
-    name: "Rolex Submariner ",
-    Image:
-      "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/ixmPW30k9uL0/v0/-1x-1.webp ",
-    price: 144000,
+ const  Electronics = [
+ {
+    name: " Tablets",
+    Image: " https://cdn.pixabay.com/photo/2019/03/19/17/55/tab-4066426_1280.png",
+    price:  45999,
   },
   {
-    name: " Omega Speedmaster",
-    Image:
-      "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcSGhyX5tVE1JrPCNLYuYUjnUM9659rTFmlsxxa7Y-sNpOQ2L4p7dQpAHB0WCAatGbYvOp6QnHkl_ZgCvAu1fmU4hDDbRbf2BnSjxrWnlksfmT1KhnfTVcKalQ ",
-    price: 616000,
+    name: "Smartwatch",
+    Image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRort7UIUuZ56aGGKt9V68pn1yOSiZSdAcsdg&s ",
+      price: 2999,
   },
   {
-    name: "Casio G-Shock ",
-    Image:
-      " https://www.casio.com/content/dam/casio/product-info/locales/in/en/timepiece/product/watch/G/GB/gbm/gbm-2100-1a/assets/GBM-2100-1A.png.transform/main-visual-sp/image.png ",
-    price: 15000,
+    name: " Bluetooth Earphones",
+    Image: " https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3ga5zOABwbqVUiIXsSFFlYVtsTOiCc7Z-yg&s",
+    price:999 ,
   },
   {
-    name: "Titan ",
-    Image:
-      "https://www.titan.co.in/dw/image/v2/BKDD_PRD/on/demandware.static/-/Sites-titan-master-catalog/default/dw1888ad40/images/Titan/Catalog/1805QM01_1.jpg?sw=800&sh=800 ",
-    price: 300000,
+    name: "Smart TV",
+    Image: " https://media.istockphoto.com/id/467946398/photo/contemporary-curved-led-smart-tv-design.jpg?s=612x612&w=0&k=20&c=s-eIL1kSR1YalWVGFk9sIvt0XbJMQGIlLlzUUbw6jLA=",
+    price: 22999,
   },
   {
-    name: "Fastrack ",
-    Image:
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTmYq7CbByxwrWIxPccbUeSIlJKdkWPkbm97g&s ",
-    price: 330000,
+    name: " Air Conditioner",
+    Image: "https://cdn.pixabay.com/photo/2021/09/08/07/20/air-conditioner-6605973_1280.jpg ",
+    price: 30999,
   },
   {
-    name: " Sonata",
-    Image:
-      "https://www.sonatawatches.in/dw/image/v2/BKDD_PRD/on/demandware.static/-/Sites-titan-master-catalog/default/dw24cb40e6/images/Sonata/Catalog/77105SM01_1.jpg?sw=800&sh=800 ",
-    price: 10000,
+    name: "Refrigerator ",
+    Image: "https://img.freepik.com/premium-photo/silver-steel-fridge-model-isolated-white-background_124507-67356.jpg ",
+    price: 18999,
   },
   {
-    name: "Timex India ",
-    Image:
-      "https://shop.timexindia.com/cdn/shop/files/TW2W51300.jpg?v=1714886125 ",
-    price: 3500,
+    name: " Smart Light",
+    Image: "https://images.unsplash.com/photo-1711006155490-ec01a0ecf0de?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8c21hcnQlMjBsaWdodHxlbnwwfHwwfHx8MA%3D%3D ",
+    price: 599,
   },
   {
-    name: "Maxima ",
-    Image:
-      " https://www.maximawatches.com/cdn/shop/files/48811CMGS_grande.jpg?v=1708409557",
-    price: 2000,
+    name:  "Smart Camera",
+    Image: " https://okos.in/cdn/shop/files/1_6b96dc50-8a1f-4ef9-82e1-b10b2b0ce7b7.jpg?v=1735385946",
+    price: 1999,
   },
   {
-    name: " Longines Master Collection",
-    Image:
-      " https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZ3ug5ci4je311jsx76K8NFp-oJb_SqS4TDQ&s",
-    price: 5000,
+    name: "Smart Plug",
+    Image: " https://cdn.shopify.com/s/files/1/0648/5478/6148/files/61V-MmvlplL._SL1500.jpg?v=1722602749",
+    price: 749,
   },
   {
-    name: "Cartier Tank  ",
-    Image:
-      "https://int.cartier.com/content/dam/rcq/car/2U/oB/pw/1m/QC/ah/kE/7H/qn/F8/JA/2UoBpw1mQCahkE7HqnF8JA.png.scale.314.high.tank-must-solarbeat%E2%84%A2-watch-steel.png ",
-    price: 2500,
+    name: "PlayStation 5",
+    Image: "https://bsmedia.business-standard.com/_media/bs/img/article/2023-10/11/full/1697008191-1052.jpg?im=FeatureCrop,size=(826,465)",
+    price: 49999,
   },
+  {
+    name: "Gaming Laptop ",
+    Image: " https://t4.ftcdn.net/jpg/07/41/01/41/360_F_741014161_o9PTiiWFB2gWrLPiflaQOxB0n6OxcJPB.jpg",
+    price: 75999,
+  },
+  {
+    name: " VR Headset",
+    Image: " https://m.media-amazon.com/images/I/61RgUtmRymL.jpg",
+    price: 24999,
+  }
+   
 ];
 
 const cart = {};
@@ -67,21 +68,21 @@ const productGrid = document.getElementById("productGrid");
 const cartSection = document.getElementById("cartSection");
 
 function renderProducts() {
-   watches.forEach(( watch, index) => {
+ Electronics.forEach((Electronics, index) => {
     const card = document.createElement("div");
     card.className = "product-card";
 
     const img = document.createElement("img");
-    img.src = watch.Image;
-    img.alt =  watch.name;
+    img.src =Electronics.Image;
+    img.alt = Electronics.name;
 
     const name = document.createElement("div");
     name.className = "product-name";
-    name.textContent = watch.name;
+    name.textContent = Electronics.name;
 
     const price = document.createElement("div");
     price.className = "product-price";
-    price.textContent = `₹${watch.price}`;
+    price.textContent = `₹${Electronics.price}`;
 
     const qtyLabel = document.createElement("div");
     qtyLabel.textContent = "Qty: ";
@@ -110,8 +111,8 @@ function renderProducts() {
     addToCartBtn.onclick = () => {
       const qty = parseInt(qtySpan.textContent);
       if (qty > 0) {
-        cart[watch.name] = {
-          ...watch,
+        cart[Electronics.name] = {
+          ...Electronics,
           quantity: qty,
         };
         addToCart();
@@ -121,7 +122,13 @@ function renderProducts() {
         alert("Quantity must be greater than 0 to add to cart.");
       }
     };
-    // ❤️ Heart Icon
+    //   // ❤️ Heart Icon
+    // const heart = document.createElement("i");
+    // heart.className = "bi bi-heart heart-icon";
+    // heart.onclick = () => {
+    //   heart.classList.toggle("bi-heart-fill");
+    //   heart.classList.toggle("bi-heart");
+    // };
     const heart = document.createElement("i");
     heart.className = "bi bi-heart heart-icon";
     heart.onclick = () => {

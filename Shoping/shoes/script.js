@@ -1,5 +1,5 @@
 // import {addToCart}from '../Test1.js';
-const dresses = [
+const shoes = [
   {
     name: " Nike Air Max ",
     Image:
@@ -82,21 +82,21 @@ const productGrid = document.getElementById("productGrid");
 const cartSection = document.getElementById("cartSection");
 
 function renderProducts() {
-  dresses.forEach((dress, index) => {
+ shoes.forEach((shoe, index) => {
     const card = document.createElement("div");
     card.className = "product-card";
 
     const img = document.createElement("img");
-    img.src = dress.Image;
-    img.alt = dress.name;
+    img.src = shoe.Image;
+    img.alt = shoe.name;
 
     const name = document.createElement("div");
     name.className = "product-name";
-    name.textContent = dress.name;
+    name.textContent = shoe.name;
 
     const price = document.createElement("div");
     price.className = "product-price";
-    price.textContent = `₹${dress.price}`;
+    price.textContent = `₹${shoe.price}`;
 
     const qtyLabel = document.createElement("div");
     qtyLabel.textContent = "Qty: ";
@@ -125,8 +125,8 @@ function renderProducts() {
     addToCartBtn.onclick = () => {
       const qty = parseInt(qtySpan.textContent);
       if (qty > 0) {
-        cart[dress.name] = {
-          ...dress,
+        cart[shoe.name] = {
+          ...shoe,
           quantity: qty,
         };
         addToCart();
