@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cricket Game</title>
+    
+
+    <style>
+        /* style.css */
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.banner {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.menu, .game, .how-to-play {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.hidden {
+    display: none;
+}
+
+button {
+    padding: 10px 15px;
+    font-size: 1em;
+    cursor: pointer;
+    border: none;
+    background-color: #007BFF;
+    color: white;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+label {
+    margin-right: 10px;
+    font-size: 1.1em;
+}
+
+input[type="text"], input[type="number"] {
+    padding: 8px;
+    font-size: 1em;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: calc(100% - 20px);
+}
+
+h2 {
+    margin-bottom: 10px;
+    color: #007BFF;
+}
+
+    </style>
+
+
+</head>
+<body>
+    <!-- Main container for the game -->
+<div class="container">
+
+    <!-- Banner section (can be used for displaying game title or image) -->
+    <div id="banner" class="banner"></div>
+
+    <!-- Main menu section (visible at the start) -->
+    <div id="menu" class="menu">
+        <!-- "Play" button to start the game -->
+        <button id="playBtn">Play</button>
+
+        <!-- "How to Play" button to show game instructions -->
+        <button id="howToPlayBtn">How to Play</button>
+
+        <!-- "Exit" button to exit the game (shows an alert) -->
+        <button id="exitBtn">Exit</button>
+    </div>
+
+    <!-- Game section (hidden initially, shown when "Play" is clicked) -->
+    <div id="game" class="game hidden">
+
+        <!-- Section for entering player's name before starting the game -->
+        <div id="playerNameSection">
+            <label for="playerName">Enter Your Name:</label>
+            <!-- Input field for player's name -->
+            <input type="text" id="playerName" placeholder="Your Name">
+            <!-- Button to start the game after entering the name -->
+            <button id="startGameBtn">Start Game</button>
+        </div>
+
+        <!-- Game play section (hidden initially, shown after entering the name) -->
+        <div id="gamePlay" class="hidden">
+            <!-- Displays welcome message with player's name -->
+            <p id="welcomeMessage"></p>
+
+            <!-- Displays the random run chosen by the computer -->
+            <p>Computer Run: <span id="computerRun">0</span></p>
+
+            <!-- Displays the player's total score -->
+            <p>Your Score: <span id="playerScore">0</span></p>
+
+            <!-- Input for the player to enter a number between 1 and 6 -->
+            <label for="playerRun">Enter your run (1-6):</label>
+            <input type="number" id="playerRun" min="1" max="6">
+
+            <!-- Button to submit the player's chosen run -->
+            <button id="submitRunBtn">Submit Run</button>
+
+            <!-- Displays result messages (whether the player is out or can continue) -->
+            <p id="resultMessage"></p>
+        </div>
+    </div>
+
+    <!-- "How to Play" section (hidden initially, shown when "How to Play" is clicked) -->
+    <div id="howToPlay" class="how-to-play hidden">
+        <!-- Title for the instructions -->
+        <h2>How to Play</h2>
+
+        <!-- Brief game description -->
+        <p>It is a single-player game where you play against the computer.</p>
+
+        <!-- Instructions list -->
+        <ul>
+            <li>The computer will generate a random number between 1-6.</li>
+            <li>You also pick a number between 1-6.</li>
+            <li>If your number matches the computer's, you're out!</li>
+            <li>If not, your score increases by your chosen number.</li>
+        </ul>
+
+        <!-- Button to go back to the main menu -->
+        <button id="backToMenuBtn">Back to Menu</button>
+    </div>
+
+</div>
+
+    <script>
+        // script.js
+// JavaScript for game logic
+document.addEventListener("DOMContentLoaded", () => {  
+    // Wait until the DOM (HTML structure) is fully loaded before executing this script
+
+    // Get references to menu buttons
+    const menu = document.getElementById("menu");  // Get the main menu section
+    const playBtn = document.getElementById("playBtn");  // Get the "Play" button
+    const howToPlayBtn = document.getElementById("howToPlayBtn");  // Get the "How to Play" button
+    const exitBtn = document.getElementById("exitBtn");  // Get the "Exit" button
+
+    // Get references to game elements
+    const game = document.getElementById("game");  // Get the game section (initially hidden)
+    const playerNameSection = document.getElementById("playerNameSection");  // Get the player name input section
+    const playerNameInput = document.getElementById("playerName");  // Get the input field where player enters name
+    const startGameBtn = document.getElementById("startGameBtn");  // Get the "Start Game" button
+
+    // Get references to gameplay elements
+    const gamePlay = document.getElementById("gamePlay");  // Get the actual game play section (initially hidden)
+    const welcomeMessage = document.getElementById("welcomeMessage");  // Get the welcome message area
+    const computerRun = document.getElementById("computerRun");  // Get the element to display computer's run
+    const playerScore = document.getElementById("playerScore");  // Get the element to display player's score
+    const playerRunInput = document.getElementById("playerRun");  // Get the input field where player enters a run (1-6)
+    const submitRunBtn = document.getElementById("submitRunBtn");  // Get the "Submit Run" button
+    const resultMessage = document.getElementById("resultMessage");  // Get the element to display result messages
+
+    // Get references to "How to Play" section
+    const howToPlay = document.getElementById("howToPlay");  // Get the "How to Play" section
+    const backToMenuBtn = document.getElementById("backToMenuBtn");  // Get the "Back to Menu" button
+
+    // Initialize game variables
+    let playerName = "";  // Variable to store player's name
+    let score = 0;  // Variable to keep track of player's score
+
+    // Event listener for "Play" button
+    playBtn.addEventListener("click", () => {
+        menu.classList.add("hidden");  // Hide the menu
+        game.classList.remove("hidden");  // Show the game section
+    });
+
+    // Event listener for "How to Play" button
+    howToPlayBtn.addEventListener("click", () => {
+        menu.classList.add("hidden");  // Hide the menu
+        howToPlay.classList.remove("hidden");  // Show the "How to Play" section
+    });
+
+    // Event listener for "Exit" button
+    exitBtn.addEventListener("click", () => {
+        alert("Thank you for playing!");  // Show an alert message when exiting the game
+    });
+
+    // Event listener for "Back to Menu" button
+    backToMenuBtn.addEventListener("click", () => {
+        howToPlay.classList.add("hidden");  // Hide the "How to Play" section
+        menu.classList.remove("hidden");  // Show the main menu
+    });
+
+    // Event listener for "Start Game" button
+    startGameBtn.addEventListener("click", () => {
+        playerName = playerNameInput.value.trim();  // Get the entered player name and remove extra spaces
+
+        if (playerName === "") {  // Check if the input is empty
+            alert("Please enter your name!");  // Show an alert if name is not entered
+            return;  // Stop execution
+        }
+
+        welcomeMessage.textContent = `Welcome, ${playerName}!`;  // Display a welcome message with the player's name
+        playerNameSection.classList.add("hidden");  // Hide the player name input section
+        gamePlay.classList.remove("hidden");  // Show the game play section
+    });
+
+    // Event listener for "Submit Run" button
+    submitRunBtn.addEventListener("click", () => {
+        const playerRun = parseInt(playerRunInput.value);  // Get the player's entered run and convert it to an integer
+
+        // Validate input: Check if the entered run is a number between 1 and 6
+        if (isNaN(playerRun) || playerRun < 1 || playerRun > 6) {
+            alert("Please enter a number between 1 and 6!");  // Show an alert if input is invalid
+            return;  // Stop execution
+        }
+
+        // Generate a random number (1-6) for the computer's turn
+        const cpuGuess = Math.floor(Math.random() * 6) + 1;
+        computerRun.textContent = cpuGuess;  // Display the computer's run choice
+
+        // Check if player's run matches the computer's run
+        if (playerRun === cpuGuess) {
+            resultMessage.textContent = `${playerName} is out! Final Score: ${score}`;  // Display "out" message with final score
+            gamePlay.classList.add("hidden");  // Hide the game play section
+            playerNameSection.classList.remove("hidden");  // Show player name input section again
+            score = 0;  // Reset score for a new game
+        } else {
+            score += playerRun;  // Add the player's run to their total score
+            playerScore.textContent = score;  // Update the displayed player score
+            resultMessage.textContent = "Keep going!";  // Display encouragement message
+        }
+
+        // Clear the player's input field for the next turn
+        playerRunInput.value = "";
+    });
+});
+    </script>
+</body>
+</html>

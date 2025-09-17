@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Defines the character encoding for the webpage -->
+    <meta charset="UTF-8">
+    
+    <!-- Ensures proper rendering and responsiveness on all devices -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Title of the webpage (appears on the browser tab) -->
+    <title>Registration Form</title>
+
+    <!-- Internal CSS to style the registration form -->
+    <style>
+        /* Styling for the body */
+        body {
+            font-family: Arial, sans-serif; /* Sets the font style */
+            background-color: #f2f2f2; /* Light gray background color */
+            display: flex; /* Uses flexbox for centering */
+            justify-content: center; /* Centers content horizontally */
+            align-items: center; /* Centers content vertically */
+            height: 100vh; /* Makes the body take the full viewport height */
+            margin: 0; /* Removes default margin */
+        }
+
+        /* Styling for the registration form container */
+        .register-container {
+            background-color: #fff; /* White background */
+            padding: 20px; /* Adds space inside the box */
+            border-radius: 8px; /* Rounds the corners */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow */
+            width: 300px; /* Fixes the width of the container */
+        }
+
+        /* Styling for the heading inside the form */
+        .register-container h2 {
+            margin-bottom: 20px; /* Adds space below the heading */
+            color: #333; /* Dark gray text color */
+        }
+
+        /* Styling for the form labels */
+        .register-container label {
+            display: block; /* Ensures labels appear on a new line */
+            margin-bottom: 5px; /* Adds space below labels */
+            color: #555; /* Medium gray text color */
+        }
+
+        /* Styling for the input fields */
+        .register-container input {
+            width: 100%; /* Makes inputs take full width */
+            padding: 10px; /* Adds padding inside input fields */
+            margin-bottom: 15px; /* Adds space below inputs */
+            border: 1px solid #ccc; /* Adds a light gray border */
+            border-radius: 4px; /* Rounds the corners of input fields */
+        }
+
+        /* Styling for the submit button */
+        .register-container button {
+            width: 100%; /* Makes the button take full width */
+            padding: 10px; /* Adds padding inside the button */
+            background-color: #4CAF50; /* Green background */
+            color: white; /* White text */
+            border: none; /* Removes border */
+            border-radius: 4px; /* Rounds the corners */
+            cursor: pointer; /* Changes cursor to pointer on hover */
+        }
+
+        /* Changes button color when hovered */
+        .register-container button:hover {
+            background-color: #45a049; /* Darker green */
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Registration form container -->
+    <div class="register-container">
+        <h2>Register</h2> <!-- Form heading -->
+
+        <!-- Form with POST method (data is sent to the server) -->
+        <form action="/register" method="post">
+            <!-- Name input field -->
+            <label for="name">Name:</label> <!-- Label for name -->
+            <input type="text" id="name" name="name" placeholder="Enter your name" required> 
+            <!-- Text input for name (required) -->
+
+            <!-- Email input field -->
+            <label for="email">Email:</label> <!-- Label for email -->
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+            <!-- Email input (ensures valid email format, required) -->
+
+            <!-- Password input field -->
+            <label for="pwd">Password:</label> <!-- Label for password -->
+            <input type="password" id="pwd" name="password" placeholder="Enter your password" required>
+            <!-- Password input (hides characters, required) -->
+
+            <!-- Submit button -->
+          <button type="submit" onclick="window.location.href='./login_form.html'; return false;">Submit</button>
+
+            
+        </form>
+    </div>
+
+</body>
+</html>

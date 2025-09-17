@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Specifies the character encoding as UTF-8 -->
+    <meta charset="UTF-8">
+
+    <!-- Ensures the webpage is responsive on different screen sizes -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Title of the webpage (appears on the browser tab) -->
+    <title>Login Form</title>
+  <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap JavaScript Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Internal CSS for styling the login form -->
+    <style>
+        /* Styling for the body */
+        body {
+            font-family: Arial, sans-serif; /* Sets font style */
+            background-color: #f2f2f2; /* Light gray background color */
+            display: flex; /* Uses flexbox for centering */
+            justify-content: center; /* Centers content horizontally */
+            align-items: center; /* Centers content vertically */
+            height: 100vh; /* Full viewport height */
+            margin: 0; /* Removes default margin */
+        }
+
+        /* Styling for the login form container */
+        .login-container {
+            background-color: #fff; /* White background */
+            padding: 20px; /* Space inside the container */
+            border-radius: 8px; /* Rounded corners */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow */
+            width: 300px; /* Fixes the width of the container */
+        }
+
+        /* Styling for the heading inside the form */
+        .login-container h2 {
+            margin-bottom: 20px; /* Adds space below the heading */
+            color: #333; /* Dark gray text color */
+        }
+
+        /* Styling for the form labels */
+        .login-container label {
+            display: block; /* Ensures labels appear on a new line */
+            margin-bottom: 5px; /* Adds space below labels */
+            color: #555; /* Medium gray text color */
+        }
+
+        /* Styling for the input fields */
+        .login-container input {
+            width: 100%; /* Makes inputs take full width */
+            padding: 10px; /* Adds padding inside input fields */
+            margin-bottom: 15px; /* Adds space below inputs */
+            border: 1px solid #ccc; /* Adds a light gray border */
+            border-radius: 4px; /* Rounds the corners of input fields */
+        }
+
+        /* Styling for the login button */
+        .login-container button {
+            width: 100%; /* Makes the button take full width */
+            padding: 10px; /* Adds padding inside the button */
+            background-color: #4CAF50; /* Green background */
+            color: white; /* White text */
+            border: none; /* Removes border */
+            border-radius: 4px; /* Rounds the corners */
+            cursor: pointer; /* Changes cursor to pointer on hover */
+        }
+
+        /* Changes button color when hovered */
+        .login-container button:hover {
+            background-color: #45a049; /* Darker green */
+        }
+     
+    </style>
+   
+</head>
+<body>
+
+    <!-- Login form container -->
+    <div class="login-container">
+        <h2>Login</h2> <!-- Form heading -->
+
+        <!-- Form with POST method (sends data securely to the server) -->
+        <form action="/login" method="post">
+            <!-- Email input field -->
+            <label for="email">Email:</label> <!-- Label for email field -->
+            <input type="email" id="email" name="email" placeholder="Enter your email" required> 
+            <!-- Input field for email (valid email format required) -->
+
+            <!-- Password input field -->
+            <label for="pwd">Password:</label> <!-- Label for password field -->
+            <input type="password" id="pwd" name="password" placeholder="Enter your password" required>
+            <!-- Password input field (hides input characters for security) -->
+
+            <!-- Submit button -->
+            <a href="./welcome.html" class="btn btn-primary btn-lg play-btn">Login</a>
+
+        </form>
+    </div>
+
+</body>
+</html>
