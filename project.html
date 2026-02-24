@@ -1,0 +1,97 @@
+ <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Projects | Bala Yaswanth</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+ <link rel="stylesheet" href="project.css">
+  </head>
+  <body>
+    <button class="nav-toggle" onclick="toggleMenu()">☰</button>
+
+    <nav id="sidebar">
+      <!-- button class="close-btn" onclick="toggleMenu()">✖</button -->
+      <ul>
+         <div class="sidebar">
+          <div class="icon">
+            <aside class="display_icon">Home</aside>
+            <a href="index.html" class="display_anchor"
+              ><i class="fas fa-home"></i
+            ></a>
+          </div>
+          <div class="icon">
+            <aside class="display_icon">About</aside>
+
+            <a href="about.html" class="display_anchor "> <i class="fas fa-user"></i></a>
+          </div>
+          <div class="icon">
+            <aside class="display_icon">Portfolio</aside>
+
+            <a href="project.html" class="display_anchor"><i class="fas fa-briefcase"></i></a>
+          </div>
+          <div class="icon">
+            <aside class="display_icon">Certification</aside>
+
+            <a href="education.html"  class="display_anchor "
+              ><i class="fas fa-cogs"></i
+            ></a>
+          </div>
+          <div class="icon">
+            <aside class="display_icon">Contact</aside>
+
+            <a href="contact.html"  class="display_anchor"><i class="fas fa-envelope"></i></a>
+          </div>
+      </ul>
+    </nav>
+
+    <main class="project-section">
+      <h1>My Projects</h1>
+      <div class="container">
+        <div class="project-card top-bottom">
+          <h3>LinkShortener website</h3>
+          <p>
+           By integrating Next.js,Vercel, and Neon PostgreSQL, the project showcases full-stack development.</p><br>
+          <a href="https://github.com/yash1438/project" class="btn">View Code</a>
+           <a href="https://github.com/yash1438/project" class="btn">Run Code</a>
+        </div>
+           <div class="project-card left-right">
+          <h3>NetBankinh</h3>
+          <p>
+            A Java-based system that allows users to Withdraw, Deposit,view Balance and Generate new pin .
+          </p>
+          <a href=" https://github.com/vala0467/javaproject1/blob/main/Netbanking.java" class="btn">View Code</a>
+        </div>
+
+        <div class="project-card bottom-top">
+          <h3>interactive User vs. Computer game</h3>
+          <p>
+           The project successfully integrates Python,Database management,frontend to create an interactive and responsive dice-based game. 
+          </p>
+             <a href="https://github.com/yash1438/Python-Project" class="btn">View Code</a>
+             <a href="https://handcricketgames.netlify.app/" class="btn">Run Code</a>
+          
+        </div>
+
+        <div class="project-card right-left">
+          <h3>Yaswanth Stores</h3>
+          <p>
+            Fully responsive e-commerce site with wishlist and product details using HTML, CSS, JavaScript, and Bootstrap.
+          </p>
+          <a href="https://github.com/vala0467/yash/tree/master/MINIE-COMMERCE" class="btn">View Code </a>
+          <a href="https://yaswanthapp.netlify.app/" class="btn" >Run Code</a>
+
+        </div>
+      </div>
+    </main>
+
+    <script>
+      function toggleMenu() {
+        document.getElementById("sidebar").classList.toggle("show");
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,315 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #003049;
+  /* background-image: url(https://img.freepik.com/premium-photo/texture-black-yellow-paper-background-half-two-colors-macro-structure-dense-craft-cardboard_113767-5797.jpg); */
+  color: #fefbfb;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* Toggle Button */
+.nav-toggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1001;
+  background: none;
+  border: none;
+  font-size: 1.8rem;
+  color: #eef0f1;
+  cursor: pointer;
+  display: none;
+
+}
+
+/* Sidebar Navigation */
+#sidebar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 220px;
+  background-color: #003049;
+  padding: 2rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.5rem;
+  transition: transform 0.3s ease;
+  z-index: 1000;
+  transform: translateX(100%);
+}
+
+#sidebar.show {
+  transform: translateX(0%);
+}
+
+#sidebar ul {
+  list-style: none;
+  width: 100%;
+}
+
+#sidebar ul li {
+  margin-bottom: 1rem;
+}
+
+#sidebar ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: color 0.3s;
+  padding: 0.5rem;
+}
+
+#sidebar ul li a:hover,
+#sidebar ul li a.active {
+  color: #fcbf49;
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  align-self: flex-end;
+  cursor: pointer;
+  display: none;
+}
+
+/* Main content */
+.center-content {
+  margin-right: 0;
+  width: 78%;
+  display: flex;
+  flex-wrap: wrap;
+  min-height: 100vh;
+  padding: 2rem;
+}
+
+.center-content > div {
+  flex: 1 1 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.center-content img {
+  width: 65%;
+  max-width: 400px;
+  height: auto;
+  border-radius: 10%;
+}
+
+.text-content {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: flex-start;
+   
+}
+
+.text-content h1 {
+  font-size: 2rem;
+  width: 98%;
+}
+
+.text-content p {
+  font-size: 1.1rem;
+   width: 98%;
+}
+
+/* Small screen (mobile) */
+@media (max-width: 768px) {
+  .nav-toggle {
+    display: block;
+  }
+
+  .close-btn {
+    display: block;
+  }
+
+  .center-content {
+    flex-direction: column;
+    text-align: center;
+    margin-right: 0;
+  }
+
+  .text-content {
+    align-items: center;
+  }
+
+  .center-content img {
+    max-width: 200px;
+  }
+}
+
+/* Large screen (desktop) */
+@media (min-width: 769px) {
+  #sidebar {
+    transform: translateX(0);
+  }
+
+  .nav-toggle,
+  .close-btn {
+    display: none;
+  }
+
+  .center-content {
+    margin-right: 220px;
+  }
+}
+.sidebar {
+  position: fixed;
+  top: 50%;
+  right: 20px; /* changed from left to right */
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.icon {
+  width: 150px;
+  height: 60px;
+  /* background: #2a2a2a; */
+  color: #ccc;
+  /* border: solid red; */
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  display: flex;
+}
+
+.icon i {
+  font-size: 24px;
+}
+
+.display_icon {
+  font-size: 16px;
+  /* width: 80px; */
+  /* display: none; */
+  visibility: hidden;
+  height: 100%;
+  /* width: 100%; */
+  flex-basis: 60%;
+  border-radius: 50px 0 0 50px;
+  display: flex;
+  align-items: center;
+  justify-content:center ;
+}
+
+.display_anchor{
+  flex-basis: 40%;
+  background-color: #f0b000;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content:center;
+  border-radius: 100%
+}
+
+.icon:hover{
+  background-color: #f0b000;
+}
+/* Hover effect ("spice") */
+.icon:hover  .display_icon {
+  visibility: visible;
+  color: white;
+  transition: all 0.3s ease; /* smooth animation */
+}
+
+/* Active (highlighted) icon */
+/* .icon.active {
+  background: #ffb700;
+  color: white;
+} */
+/* Tooltip label (hidden by default) */
+.label {
+  position: absolute;
+  right: 70px;
+  top: 50%;
+  transform: translateY(-50%) translateX(10px);
+  background: white;
+  color: black;
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 14px;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+
+/* Show label on hover */
+.icon:hover .label {
+  opacity: 1;
+  transform: translateY(-50%) translateX(0);
+}
+
+ /* .more-btn {
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: #f0b000;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.more-btn:hover {
+  background-color: #d18e00;
+  transform: scale(1.05);
+} */
+
+.text-uppercase {
+    text-transform: uppercase !important;
+}
+/* Ensure the container doesn't cut off letters */
+.typing-container {
+  display: inline-block;
+  letter-spacing: 2px;
+}
+
+.typing-text {
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 3px solid #007bff; /* The cursor */
+  width: 0; 
+  
+  /* 1. typing: 3 seconds, stops at end (forwards)
+     2. blink-caret: 0.75s per blink, repeats 4 times (3 seconds total), 
+        then stops (forwards) 
+  */
+  animation: 
+    typing 3s steps(30, end) forwards, 
+    blink-caret 0.75s step-end 4 forwards; 
+}
+
+/* Typing logic */
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+/* Cursor logic: Ends on transparent to make it "disappear" */
+@keyframes blink-caret {
+  from, to { border-color: transparent; }
+  50% { border-color: #007bff; }
+  100% { border-color: transparent; }
+}

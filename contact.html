@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Bala Yaswanth</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+   <link rel="stylesheet" href="contact.css">
+</head>
+<body>
+  <button class="nav-toggle" onclick="toggleMenu()">☰</button>
+
+  <nav id="sidebar">
+    <ul>
+      <div class="sidebar">
+          <div class="icon">
+            <aside class="display_icon">Home</aside>
+            <a href="index.html" class="display_anchor"
+              ><i class="fas fa-home"></i
+            ></a>
+          </div>
+          <div class="icon">
+            <aside class="display_icon">About</aside>
+
+            <a href="about.html" class="display_anchor "> <i class="fas fa-user"></i></a>
+          </div>
+          <div class="icon">
+            <aside class="display_icon">Portfolio</aside>
+
+            <a href="project.html" class="display_anchor"><i class="fas fa-briefcase"></i></a>
+          </div>
+          <div class="icon">
+            <aside class="display_icon">Certification</aside>
+
+            <a href="education.html"  class="display_anchor "
+              ><i class="fas fa-cogs"></i
+            ></a>
+          </div>
+          <div class="icon">
+            <aside class="display_icon">Contact</aside>
+
+            <a href="contact.html"  class="display_anchor"><i class="fas fa-envelope"></i></a>
+          </div>
+    </ul>
+  </nav>
+
+  <section class="contact-section">
+    <!-- Left Side -->
+    <div class="contact-left">
+      <h2>PING ME!</h2>
+      <p>Feel free to get in touch with me. I am always open to discussing new projects, creative ideas, or opportunities to be part of your visions.</p>
+
+      <div class="info-block">
+        <i class="fas fa-envelope"></i>
+        <div>
+          <span>MAIL ME</span>
+          <small>balayaswanthkumarv@gmail.com</small>
+        </div>
+      </div>
+
+      <div class="info-block">
+        <i class="fas fa-phone"></i>
+        <div>
+          <span>CALL ME</span>
+          <small>+91 70959834423</small>
+        </div>
+      </div>
+
+<div class="social-icons">
+  <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+  <a href="https://www.facebook.com/"><i class="fab fa-facebook"></i></a>
+  <a href="https://github.com/dashboard"><i class="fab fa-github"></i></a>
+  <a href="https://www.linkedin.com/feed/"><i class="fab fa-linkedin"></i></a>
+  <a href="https://wa.me/91-7095984423"><i class="fab fa-whatsapp"></i></a>
+</div>
+
+    </div>
+
+    <!-- Right Side -->
+    <div class="contact-right">
+      <h1>LET’S WORK <span>TOGETHER</span></h1>
+
+      <form>
+        <div class="form-group">
+          <input type="text" placeholder="YOUR NAME" required />
+          <input type="email" placeholder="YOUR EMAIL" required />
+          <input type="text" placeholder="YOUR SUBJECT" />
+        </div>
+        <div class="form-group">
+          <textarea placeholder="YOUR MESSAGE" required></textarea>
+        </div>
+        <button type="submit" class="submit-btn" href="balayaswanthkumarv@gmail.com">SEND MESSAGE</button>
+      </form>
+    </div>
+  </section>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById("sidebar").classList.toggle("show");
+    }
+  </script>
+</body>
+</html>

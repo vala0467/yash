@@ -1,0 +1,74 @@
+ 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Bala Yaswanth</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <!-- Toggle button (mobile only) -->
+  <button class="nav-toggle" onclick="toggleMenu()">☰</button>
+
+  <!-- Sidebar -->
+  <nav id="sidebar">
+    
+    <ul>
+      <div class="sidebar">
+          <div class="icon">
+            <aside class="display_icon">Home</aside>
+            <a href="index.html" class="display_anchor"
+              ><i class="fas fa-home"></i
+            ></a>
+          </div>
+          <div class="icon">
+            <aside class="display_icon">About</aside>
+
+            <a href="about.html" class="display_anchor "> <i class="fas fa-user"></i></a>
+          </div>
+          <div class="icon">
+            <aside class="display_icon">Portfolio</aside>
+
+            <a href="project.html" class="display_anchor"><i class="fas fa-briefcase"></i></a>
+          </div>
+          <div class="icon">
+            <aside class="display_icon">Certification</aside>
+
+            <a href="education.html"  class="display_anchor "
+              ><i class="fas fa-cogs"></i
+            ></a>
+          </div>
+          <div class="icon">
+            <aside class="display_icon">contact</aside>
+
+            <a href="contact.html"  class="display_anchor"><i class="fas fa-envelope"></i></a>
+          </div>
+    </ul>
+  </nav>
+
+  <!-- Main Content -->
+  <main class="center-content">
+    <div>
+      <img src="./my-pic.jpg" alt="Bala Yaswanth" class="profile-img"/>
+    </div>
+    <div class="text-content">
+     <h1 class="text-uppercase open-sans-font mb-0 d-block d-sm-none d-lg-block">hi there !</h1>
+     <h1 class="text-uppercase poppins-font"><span>I'm </span>bala Yaswanth Kumar</h1>
+     <p class="text-uppercase poppins-font typing-text">Creative Full Stack Developer</p>
+    </div>
+     <!--a href="about.html">
+      <button class="more-btn">More About Me</button>
+    </a-->
+  </main>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById("sidebar").classList.toggle("show");
+    }
+  </script>
+</body>
+</html>
+
+

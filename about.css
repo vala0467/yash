@@ -1,0 +1,436 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color:  #003049;
+  color: #f2f6f8;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 220px;
+  background-color: #003049;
+  padding: 2rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.5rem;
+}
+
+nav ul {
+  list-style: none;
+  width: 100%;
+}
+
+nav ul li {
+  margin-bottom: 1rem;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  display: block;
+  padding: 0.5rem;
+  transition: color 0.3s;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+  color: #fcbf49;
+}
+
+main {
+  margin-right: 220px;
+  padding: 2rem;
+}
+
+/* ABOUT ME */
+.about-section .aboutUs {
+  /* border: solid red; */
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.about-section h1 span {
+  color: #eaf492;
+}
+
+/* .about-content {
+        display: flex;
+        gap: 2rem;
+        flex-wrap: wrap;
+      } */
+
+.about-container {
+  flex: 1;
+  min-width: 250px;
+  text-align: center;
+}
+
+.about-container h1 {
+  font-size: 1.5rem;
+  color: #003049;
+  margin-bottom: 1rem;
+}
+
+.about-container p {
+  margin: 0.5rem 0;
+}
+
+.cv-button {
+  display: inline-block;
+  margin-top: 1.5rem;
+  padding: 0.7rem 1.5rem;
+  background-color: #00796b;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 6px;
+  transition: background-color 0.3s;
+}
+
+.cv-button:hover {
+  background-color: #004d40;
+}
+
+/* SKILLS SECTION */
+.skill-section {
+  text-align: center;
+  margin-top: 4rem;
+}
+
+.skill-section h1 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.skill-section h1 span {
+  color: #0077b6;
+}
+
+.skills-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.circle {
+  width: 120px;
+  height: 120px;
+  position: relative;
+}
+
+svg {
+  transform: rotate(-90deg);
+  width: 100%;
+  height: 100%;
+}
+
+.bg {
+  fill: none;
+  stroke: #ddd;
+  stroke-width: 3.8;
+}
+
+.progress {
+  fill: none;
+  stroke: #0077b6;
+  stroke-width: 3.8;
+  stroke-linecap: round;
+  transition: stroke-dasharray 0.6s ease;
+}
+
+.skill-label {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  text-align: center;
+  transform: translate(-50%, -50%);
+  font-size: 14px;
+  font-weight: bold;
+  color: #f42606;
+}
+
+.skill-label span {
+  font-size: 16px;
+  color: #d62828;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  main {
+    margin-right: 0;
+  }
+
+  .about-content {
+    flex-direction: column;
+  }
+
+  nav {
+    position: static;
+    width: 100%;
+    height: auto;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+.about-content {
+  /* border: solid; */
+  display: flex;
+  justify-content: space-around;
+  /* align-items: flex-start; */
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+
+.about-container {
+  font-size: 1.5rem;
+  text-align: justify;
+  padding: 10px;
+  /* border: solid; */
+  min-width: 280px;
+  /* ensures left alignment */
+}
+.education-section {
+  margin-top: 4rem;
+  text-align: center;
+  color: #003049;
+}
+
+.education-section h1 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.education-section h1 span {
+  color: #f77f00;
+}
+
+.education-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+}
+
+.edu-item {
+  background-color: #fff;
+  border-left: 5px solid #003049;
+  padding: 1rem 2rem;
+  width: 100%;
+  max-width: 700px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  text-align: left;
+}
+
+.edu-item h2 {
+  color: #003049;
+  margin-bottom: 0.5rem;
+}
+
+.edu-item p {
+  margin: 0.3rem 0;
+}
+/* Toggle Button */
+.nav-toggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1001;
+  background: none;
+  border: none;
+  font-size: 1.8rem;
+  color: #fefbfb;
+  cursor: pointer;
+  display: none;
+}
+
+/* Sidebar Navigation */
+nav {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 220px;
+  background-color: #003049;
+  padding: 2rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.5rem;
+  transition: transform 0.3s ease;
+  z-index: 1000;
+}
+
+nav ul {
+  list-style: none;
+  width: 100%;
+}
+
+nav ul li {
+  margin-bottom: 1rem;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: color 0.3s;
+  padding: 0.5rem 0.5rem;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+  color: #fcbf49;
+}
+@media (max-width: 750px) {
+  .nav-toggle {
+    display: block;
+  }
+
+  nav {
+    transform: translateX(100%);
+    align-items: flex-start; /* Align nav items to top */
+    justify-content: flex-start; /* Align content to top */
+    padding-top: 2rem; /* Top spacing */
+  }
+
+  nav.show {
+    transform: translateX(0%);
+  }
+
+  main.center-content {
+    margin: 0;
+    padding: 3rem 1rem;
+  }
+}
+
+/* .close-btn {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  align-self: flex-end;
+  cursor: pointer;
+  display: none;
+} */
+
+/* Show close button only on small screens */
+/* @media (max-width: 768px) {
+  .close-btn {
+    display: block;
+  }
+} */
+
+.sidebar {
+  position: fixed;
+  top: 50%;
+  right: 20px; /* changed from left to right */
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.icon {
+  width: 150px;
+  height: 60px;
+  /* background: #2a2a2a; */
+  color: #ccc;
+  /* border: solid red; */
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  display: flex;
+}
+
+.icon i {
+  font-size: 24px;
+}
+
+.display_icon {
+  font-size: 16px;
+  /* width: 80px; */
+  /* display: none; */
+  visibility: hidden;
+  height: 100%;
+  /* width: 100%; */
+  flex-basis: 60%;
+  border-radius: 50px 0 0 50px;
+  display: flex;
+  align-items: center;
+  justify-content:center ;
+}
+
+.display_anchor{
+  flex-basis: 40%;
+  background-color: #f0b000;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content:center;
+  border-radius: 100%
+}
+
+.icon:hover{
+  background-color: #f0b000;
+}
+/* Hover effect ("spice") */
+.icon:hover  .display_icon {
+  visibility: visible;
+  color: white;
+  transition: all 0.3s ease; /* smooth animation */
+}
+
+/* Active (highlighted) icon */
+/* .icon.active {
+  background: #ffb700;
+  color: white;
+} */
+/* Tooltip label (hidden by default) */
+.label {
+  position: absolute;
+  right: 70px;
+  top: 50%;
+  transform: translateY(-50%) translateX(10px);
+  background: white;
+  color: black;
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 14px;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+
+/* Show label on hover */
+.icon:hover .label {
+  opacity: 1;
+  transform: translateY(-50%) translateX(0);
+}
+
+/* Highlighted active icon */
+/* .icon.active {
+  background: #ffb700;
+  color: white;
+} */
